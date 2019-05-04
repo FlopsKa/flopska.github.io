@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="https://flopska.com/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="flopska">
+  <meta name="description" content="Posts and writings by flopska">
+
+  <link href="https://flopska.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="flopska.com Atom" />
+
+<meta name="keywords" content="">
+
+  <title>
+    flopska.com
+&ndash; Getting started with vagrant and ansible  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <h2><a href="https://flopska.com">flopska.com</a></h2>
+      <p>Software dev and data science. Currently pursuing my M.Sc. in Computer Science at KIT. In my free time I like to climb.</p>
+      <ul>
+        <li><a href="https://flopska.com/pages/about.html">About</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="https://flopska.com">Index</a> &brvbar; <a href="https://flopska.com/archives.html">Archives</a>
+      &brvbar; <a href="https://flopska.com/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/getting-started-with-vagrant-and-ansible.html">Getting started with vagrant and ansible</a></h1>
+  </div>
+  <div class="article_text">
+    <p><a href="http://vagrantup.com">vagrant</a> is a tool to create and configure reproducible
+development environments. Wat?!</p>
+<p>Using virtual machines as your development environment has got multiple
+benefits: When you're a developer it's easy to provide every team member with
+the same environment. When your a designer you don't have the hassle of setting
+up the workspace and can focus on the design instead. When you're done and want
+to deploy your software you can use the same process you used to setup your
+virtual machines to provision your production system.</p>
+<h3>Sounds dope. Where can I get some?</h3>
+<p><a href="http://www.vagrantup.com/downloads.html">Download</a> the vagrant version for
+your system and install it. On Ubuntu that's </p>
+<div class="highlight"><pre><span></span>sudo dpkg -i vagrant_1.5.4_x86_64.deb
+</pre></div>
+
+
+<p>Eventually you have to install the virtualbox packages, too. Enter</p>
+<div class="highlight"><pre><span></span>sudo apt-get install virtualbox
+</pre></div>
+
+
+<p>That's it. Now you're ready to setup your first virtual machine. Keep calm, I
+will guide you:</p>
+<div class="highlight"><pre><span></span>vagrant init hashicorp/precise32 
+vagrant up
+vagrant ssh
+</pre></div>
+
+
+<p>Easy, heh? We just downloaded an Ubuntu precise image, created a so called
+<a href="http://docs.vagrantup.com/v2/vagrantfile/index.html">Vagrantfile</a>, booted the
+machine and connected to it. Halt the machine by disconnecting from the ssh
+session and entering <code>vagrant halt</code>.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Di 22 April 2014</p>
+    <p>Category: <a href="https://flopska.com/category/computer-science.html">computer science</a>
+    </p>
+  </div>
+
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; flopska. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. View the <a href="https://flopska.com/pages/legal-details.html">Legal Details</a>.</p>
+    </div>
+  </main>
+</body>
+</html>

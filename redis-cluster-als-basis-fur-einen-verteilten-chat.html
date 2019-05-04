@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="https://flopska.com/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="flopska">
+  <meta name="description" content="Posts and writings by flopska">
+
+  <link href="https://flopska.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="flopska.com Atom" />
+
+<meta name="keywords" content="">
+
+  <title>
+    flopska.com
+&ndash; Redis Cluster als Basis für einen verteilten Chat  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <h2><a href="https://flopska.com">flopska.com</a></h2>
+      <p>Software dev and data science. Currently pursuing my M.Sc. in Computer Science at KIT. In my free time I like to climb.</p>
+      <ul>
+        <li><a href="https://flopska.com/pages/about.html">About</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="https://flopska.com">Index</a> &brvbar; <a href="https://flopska.com/archives.html">Archives</a>
+      &brvbar; <a href="https://flopska.com/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/redis-cluster-als-basis-fur-einen-verteilten-chat.html">Redis Cluster als Basis für einen verteilten Chat</a></h1>
+  </div>
+  <div class="article_text">
+    <ul>
+<li><a href="#anforderungen">Anforderungen</a></li>
+<li><a href="#stack">Software Stack</a></li>
+<li><a href="#softwarearchitektur">Software Architektur</a></li>
+<li><a href="#hardwarearchitektur">Hardware Architektur</a></li>
+<li><a href="#ausblick">Ausblick</a></li>
+</ul>
+<h3>Anforderungen <a id="anforderungen"></a></h3>
+<ul>
+<li>mehrere Clients pro Benutzer</li>
+<li>Integrationstest des Servers als Slim Client</li>
+<li>Verlauf abrufbar</li>
+<li>verschiedene Server mit Authorisierung (falls einzelne Komponenten ausfallen immer noch lauffähig)</li>
+<li>Authorisierung an jedem Server möglich</li>
+<li>Persistierung der Nachrichten auf allen Servern/Nodes</li>
+<li>kein Datenschutz</li>
+<li>Clients pullen, Server pushen</li>
+<li>Nachrichten so schnell wie möglich auf alle anderen Server</li>
+<li>alle schreiben an alle (ein "chatroom", broadcast)</li>
+<li>Login mit E-Mail und Password</li>
+</ul>
+<h3>Software Stack <a id="stack"></a></h3>
+<ul>
+<li><a href="http://redis.io/">redis</a> wird als zentrale Datenbank für die Benutzer und die gesendeten Nachrichten verwendet. Mit redis 3.0.0 ist clustering und somit der verteilte Einsatz in den <em>stable</em>-Branch gekommen.</li>
+<li><a href="https://github.com/xetorthio/jedis">jedis</a> ist das empfohlene Java Interface für die Kommunikation mit redis.</li>
+<li><a href="http://restlet.com/">restlet</a> stellt ein Framework für RESTful Anwendungen zur Verfügung. Neben dem Server können auch Clients realisiert werden. Diese Funktionalität wird in den Integrationstests verwendet.</li>
+<li><a href="http://junit.org">junit</a> </li>
+<li><a href="http://hamcrest.org/JavaHamcrest/">hamcrest</a></li>
+<li><a href="http://projectlombok.org/">lombok</a></li>
+</ul>
+<h3>Software Architektur <a id="softwarearchitektur"></a></h3>
+<p>Mit restlet werden zwei Endpunkte für Anfragen zur Verfügung gestellt:</p>
+<div class="highlight"><pre><span></span>http://localhost:8182/user/
+http://localhost:8182/message/
+</pre></div>
+
+
+<h4>/user/</h4>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RESTUser</span> <span class="o">{</span>
+
+    <span class="nd">@Put</span><span class="o">(</span><span class="s">&quot;json&quot;</span><span class="o">)</span>
+    <span class="n">Representation</span> <span class="nf">login</span><span class="o">(</span><span class="n">ChatUser</span> <span class="n">chatUser</span><span class="o">);</span>
+
+    <span class="nd">@Post</span><span class="o">(</span><span class="s">&quot;json&quot;</span><span class="o">)</span>
+    <span class="n">ChatUser</span> <span class="nf">createUser</span><span class="o">(</span><span class="n">ChatUser</span> <span class="n">chatUser</span><span class="o">);</span>
+
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Mit der <em>createUser(ChatUser chatUser)</em> Methode kann ein neuer Benutzer am System registriert werden. Die E-Mail Adresse ist dabei eindeutig, d.h. es kann pro E-Mail Adresse nur einen Benutzer im System geben. Wird der Nutzer angelegt enthält der Rückgabewert die generierte ID und den Authentifizierungsschlüssel des neuen Benutzers.</p>
+<p>Die <em>login(ChatUser chatUser)</em> Methode wird zum Einloggen eines Benutzers verwendet. Der Benutzername und das Passwort werden überprüft und bei einer Übereinstimmung wird der entsprechende Authentifizierungsschlüssel als Cookie zurückgegeben. Bei einem Fehler sendet der Server ein HTTP Status <em>401</em>.</p>
+<h4>/message/</h4>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RESTMessage</span> <span class="o">{</span>
+
+    <span class="nd">@Post</span><span class="o">(</span><span class="s">&quot;json&quot;</span><span class="o">)</span>
+    <span class="n">Message</span> <span class="nf">sendMessage</span><span class="o">(</span><span class="n">Message</span> <span class="n">message</span><span class="o">);</span>
+
+    <span class="nd">@Get</span><span class="o">(</span><span class="s">&quot;json&quot;</span><span class="o">)</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">Message</span><span class="o">&gt;</span> <span class="nf">readMessages</span><span class="o">();</span>
+
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Das Senden einer Nachricht setzt voraus, dass der Benutzer sich vorher authorisiert hat. Das bedeutet, es muss neben der Nachricht auch ein Cookie mit dem Authentifizierungsschlüssel gesendet werden. War das Senden der Nachricht mit <em>sendMessage(Message message)</em> erfolgreich enthält die zurückgegebene Nachricht den <em>timestamp</em>, bei dem die Nachricht am Server eingegangen ist.</p>
+<p>Zum Lesen von Nachrichten ist keine Authentifizierung erforderlich. <em>readMessages</em> liefert alle auf dem Server gespeicherten Nachrichten zurück.</p>
+<h3>Hardware Architektur <a id="hardwarearchitektur"></a></h3>
+<p><img alt="Die Hardware Architektur" src="https://flopska.com/images/chat_architecture.png"></p>
+<p>Der Chat verwendet die klassische Architektur für Webapplikationen: Die Anfragen der Nutzer werden von einem Load Balancer entgegen genommen und auf die Web Server verteilt. Soll eine größere Last verarbeitet werden, können weitere Web Server hinzugefügt werden. Die Authentifizierungsinformationen für Benutzer sind clientseitig in Cookies und serverseitig in der Datenbank gespeichert. Somit hält die Webapplikation keinen State: Fällt ein Server aus routet der Load Balancer die Anfragen an einen anderen Server und der Benutzer bemerkt nichts vom Ausfall eines Servers.</p>
+<p>redis cluster hat einen Failover Mechanismus eingebaut: Beim Ausfall eines Masters wird automatisch ein bestehender Slave zum Master. In der verwendeten Konfiguration können also im Besten Fall bis zu drei Datenbankserver ausfallen.</p>
+<h3>Ausblick <a id="ausblick"></a></h3>
+<p>In der oben beschriebenen Konfiguration ist der Load Balancer ein Single Point of Failure. Eine Möglichkeit auf den Ausfall des Load Balancers zu reagieren ist der Einsatz von sogenannten <em>Elastic IP Addresses</em> (siehe <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses bei AWS</a>). Fällt der Load Balancer aus kann seine IP zeitnah einem parallel laufenden Load Balancer zugewiesen werden.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Fr 03 April 2015</p>
+    <p>Category: <a href="https://flopska.com/category/computer-science.html">computer science</a>
+    </p>
+  </div>
+
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; flopska. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. View the <a href="https://flopska.com/pages/legal-details.html">Legal Details</a>.</p>
+    </div>
+  </main>
+</body>
+</html>
