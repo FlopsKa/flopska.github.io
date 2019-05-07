@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>flopska.com</title><link href="https://flopska.com/" rel="alternate"></link><link href="https://flopska.com/feeds/all.atom.xml" rel="self"></link><id>https://flopska.com/</id><updated>2017-05-06T00:00:00+02:00</updated><entry><title>Overnight Sensations Build Log - Baffles</title><link href="https://flopska.com/overnight-sensations-build-log-baffles.html" rel="alternate"></link><published>2017-05-06T00:00:00+02:00</published><updated>2017-05-06T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2017-05-06:/overnight-sensations-build-log-baffles.html</id><summary type="html">&lt;p&gt;This is the second part of a multipart post. It features pictures of the process of routing the baffles.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Einhell Router" src="https://flopska.com/images/overnightsensations/router.JPG"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>flopska.com</title><link href="https://flopska.com/" rel="alternate"></link><link href="https://flopska.com/feeds/all.atom.xml" rel="self"></link><id>https://flopska.com/</id><updated>2019-05-04T00:00:00+02:00</updated><entry><title>Nice LaTeX Plots with Matplotlib</title><link href="https://flopska.com/nice-latex-plots-with-matplotlib.html" rel="alternate"></link><published>2019-05-04T00:00:00+02:00</published><updated>2019-05-04T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2019-05-04:/nice-latex-plots-with-matplotlib.html</id><summary type="html">&lt;p&gt;For my thesis I want the plots from jupyter notebook to integrate well with the rest of the LaTeX document. The article shows the settings necessary to achieve this look consistently by modifying the &lt;code&gt;matplotlibrc&lt;/code&gt;. Using this approach the correct settings are always used and I can't forget them.&lt;/p&gt;</summary><content type="html">&lt;p&gt;There exist various ways to use LaTeX fonts in the matplotlib plots. When I first googled this I came upon embedding &lt;code&gt;*.pgf&lt;/code&gt; files directly into the document which is then supposed to use the same font as the rest of the document. However I had problems with the correct size of the resulting images.&lt;/p&gt;
+&lt;p&gt;Now I embed the &lt;code&gt;*.pdf&lt;/code&gt; files directly which has the added advantage that it is easy to preview the files without running LaTeX. Before I always saved two files per image: One pdf for viewing, one pgf for including.&lt;/p&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;h3&gt;matplotlibrc&lt;/h3&gt;
+&lt;p&gt;The following settings are necessary in the &lt;code&gt;matplotlibrc&lt;/code&gt; file. Create this file if it does not exist and put it in the folder from which you run your notebooks. I think it's pretty self-explanatory what each setting does, otherwise the &lt;a href="https://matplotlib.org/users/usetex.html"&gt;matplotlib-help&lt;/a&gt; is of great value.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;axes.labelsize     : 12&lt;/span&gt;
+&lt;span class="na"&gt;axes.titlesize     : 14&lt;/span&gt;
+&lt;span class="na"&gt;figure.titlesize   : 14&lt;/span&gt;
+&lt;span class="na"&gt;legend.fontsize    : 10&lt;/span&gt;
+&lt;span class="na"&gt;savefig.bbox       : tight&lt;/span&gt;
+&lt;span class="na"&gt;xtick.labelsize    : 10&lt;/span&gt;
+&lt;span class="na"&gt;ytick.labelsize    : 10&lt;/span&gt;
+
+&lt;span class="na"&gt;font.cursive       : Zapf Chancery&lt;/span&gt;
+&lt;span class="na"&gt;font.family        : lmodern&lt;/span&gt;
+&lt;span class="na"&gt;font.monospace     : Courier, Computer Modern Typewriter&lt;/span&gt;
+&lt;span class="na"&gt;font.sans-serif    : Helvetica, Avant Garde, Computer Modern Sans serif&lt;/span&gt;
+&lt;span class="na"&gt;font.serif         : Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman&lt;/span&gt;
+&lt;span class="na"&gt;font.size          : 10&lt;/span&gt;
+
+&lt;span class="na"&gt;pgf.rcfonts        : False&lt;/span&gt;
+
+&lt;span class="na"&gt;text.usetex        : true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Jupyter Notebook&lt;/h3&gt;
+&lt;p&gt;To save to a pdf file from your notebook:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;savefig&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;figures/correlation.pdf&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;LaTeX document&lt;/h3&gt;
+&lt;p&gt;In the LaTeX document the image can be included using this code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;figure&lt;span class="nb"&gt;}&lt;/span&gt;[h!]
+   &lt;span class="k"&gt;\centering&lt;/span&gt;
+   &lt;span class="k"&gt;\includegraphics&lt;/span&gt;&lt;span class="na"&gt;[scale=0.8]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;figures/correlation.pdf&lt;span class="nb"&gt;}&lt;/span&gt;
+   &lt;span class="k"&gt;\caption&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;The value of the incremental correlation coefficient computed for two random variables.&lt;span class="nb"&gt;}&lt;/span&gt;
+   &lt;span class="k"&gt;\label&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fig:correlation-coefficient&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;figure&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Also you have to add&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;lmodern&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to your front matter.&lt;/p&gt;
+&lt;h3&gt;Result&lt;/h3&gt;
+&lt;p&gt;The resulting image looks like this, I think it's pretty neat.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Incremental Correlation Coefficient" src="https://flopska.com/images/correlation.png"&gt;&lt;/p&gt;
+&lt;p&gt;The sizes can also be adopted separately for each plot. For more information on font sizes, look &lt;a href="https://stackoverflow.com/questions/3899980/how-to-change-the-font-size-on-a-matplotlib-plot"&gt;here&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Overnight Sensations Build Log - Baffles</title><link href="https://flopska.com/overnight-sensations-build-log-baffles.html" rel="alternate"></link><published>2017-05-06T00:00:00+02:00</published><updated>2017-05-06T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2017-05-06:/overnight-sensations-build-log-baffles.html</id><summary type="html">&lt;p&gt;This is the second part of a multipart post. It features pictures of the process of routing the baffles.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Einhell Router" src="https://flopska.com/images/overnightsensations/router.JPG"&gt;&lt;/p&gt;
 &lt;h3&gt;Routing the baffles&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="Baffle with cutout for the woofer" src="https://flopska.com/images/overnightsensations/baffle_sub.JPG"&gt;
 &lt;img alt="Baffle with cutout for the woofer" src="https://flopska.com/images/overnightsensations/baffle_sub_2.JPG"&gt;

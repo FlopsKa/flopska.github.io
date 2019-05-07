@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="https://flopska.com/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="flopska">
+  <meta name="description" content="Posts and writings by flopska">
+
+  <link href="https://flopska.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="flopska.com Atom" />
+
+<meta name="keywords" content="">
+
+  <title>
+    flopska.com
+&ndash; Nice LaTeX Plots with Matplotlib  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <h2><a href="https://flopska.com">flopska.com</a></h2>
+      <p>Software dev and data science. Currently pursuing my M.Sc. in Computer Science at KIT. In my free time I like to climb.</p>
+      <ul>
+        <li><a href="https://flopska.com/pages/about.html">About</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="https://flopska.com">Index</a> &brvbar; <a href="https://flopska.com/archives.html">Archives</a>
+      &brvbar; <a href="https://flopska.com/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/nice-latex-plots-with-matplotlib.html">Nice LaTeX Plots with Matplotlib</a></h1>
+  </div>
+  <div class="article_text">
+    <p>There exist various ways to use LaTeX fonts in the matplotlib plots. When I first googled this I came upon embedding <code>*.pgf</code> files directly into the document which is then supposed to use the same font as the rest of the document. However I had problems with the correct size of the resulting images.</p>
+<p>Now I embed the <code>*.pdf</code> files directly which has the added advantage that it is easy to preview the files without running LaTeX. Before I always saved two files per image: One pdf for viewing, one pgf for including.</p>
+<h2>Setup</h2>
+<h3>matplotlibrc</h3>
+<p>The following settings are necessary in the <code>matplotlibrc</code> file. Create this file if it does not exist and put it in the folder from which you run your notebooks. I think it's pretty self-explanatory what each setting does, otherwise the <a href="https://matplotlib.org/users/usetex.html">matplotlib-help</a> is of great value.</p>
+<div class="highlight"><pre><span></span><span class="na">axes.labelsize     : 12</span>
+<span class="na">axes.titlesize     : 14</span>
+<span class="na">figure.titlesize   : 14</span>
+<span class="na">legend.fontsize    : 10</span>
+<span class="na">savefig.bbox       : tight</span>
+<span class="na">xtick.labelsize    : 10</span>
+<span class="na">ytick.labelsize    : 10</span>
+
+<span class="na">font.cursive       : Zapf Chancery</span>
+<span class="na">font.family        : lmodern</span>
+<span class="na">font.monospace     : Courier, Computer Modern Typewriter</span>
+<span class="na">font.sans-serif    : Helvetica, Avant Garde, Computer Modern Sans serif</span>
+<span class="na">font.serif         : Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman</span>
+<span class="na">font.size          : 10</span>
+
+<span class="na">pgf.rcfonts        : False</span>
+
+<span class="na">text.usetex        : true</span>
+</pre></div>
+
+
+<h3>Jupyter Notebook</h3>
+<p>To save to a pdf file from your notebook:</p>
+<div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;figures/correlation.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>LaTeX document</h3>
+<p>In the LaTeX document the image can be included using this code:</p>
+<div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h!]
+   <span class="k">\centering</span>
+   <span class="k">\includegraphics</span><span class="na">[scale=0.8]</span><span class="nb">{</span>figures/correlation.pdf<span class="nb">}</span>
+   <span class="k">\caption</span><span class="nb">{</span>The value of the incremental correlation coefficient computed for two random variables.<span class="nb">}</span>
+   <span class="k">\label</span><span class="nb">{</span>fig:correlation-coefficient<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</pre></div>
+
+
+<p>Also you have to add</p>
+<div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>lmodern<span class="nb">}</span>
+</pre></div>
+
+
+<p>to your front matter.</p>
+<h3>Result</h3>
+<p>The resulting image looks like this, I think it's pretty neat.</p>
+<p><img alt="Incremental Correlation Coefficient" src="https://flopska.com/images/correlation.png"></p>
+<p>The sizes can also be adopted separately for each plot. For more information on font sizes, look <a href="https://stackoverflow.com/questions/3899980/how-to-change-the-font-size-on-a-matplotlib-plot">here</a>.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Sa 04 Mai 2019</p>
+    <p>Category: <a href="https://flopska.com/category/cs.html">CS</a>
+    </p>
+  </div>
+
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; flopska. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. View the <a href="https://flopska.com/pages/legal-details.html">Legal Details</a>.</p>
+    </div>
+  </main>
+</body>
+</html>
