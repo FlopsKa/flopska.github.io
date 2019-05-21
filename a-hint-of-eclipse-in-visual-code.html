@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="https://flopska.com/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="flopska">
+  <meta name="description" content="Posts and writings by flopska">
+
+  <link href="https://flopska.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="flopska.com Atom" />
+
+<meta name="keywords" content="">
+
+  <title>
+    flopska.com
+&ndash; A Hint of Eclipse in Visual Code  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <h2><a href="https://flopska.com">flopska.com</a></h2>
+      <p>Software dev and data science. Currently pursuing my M.Sc. in Computer Science at KIT. In my free time I like to climb.</p>
+      <ul>
+        <li><a href="https://flopska.com/pages/about.html">About</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="https://flopska.com">Index</a> &brvbar; <a href="https://flopska.com/archives.html">Archives</a>
+      &brvbar; <a href="https://flopska.com/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/a-hint-of-eclipse-in-visual-code.html">A Hint of Eclipse in Visual Code</a></h1>
+  </div>
+  <div class="article_text">
+    <p>Professionally I am a heavy eclipse user. I heard that IntelliJ is better by now
+but I have yet to make the switch. However, the focus of eclipse clearly is Java
+programming. For my own projects I tend to use python - and while vim is awesome
+I prefer the support of Microsoft's Visual Code.</p>
+<h1>Eclipse shortcuts in Visual Code</h1>
+<p>The Eclipse IDE has its own (huge) set of shortcuts: to move around code, to
+search, to refactor, to run tests, to run a gradle task, ... . The list is
+endless. Some time ago we literally printed the standard shortcuts on two sheets
+of paper and marked the ones we knew - so that we could focus on memorizing the
+rest.</p>
+<p>Compared to all the support eclipse provides when refactoring java, the support
+of Visual Code seems minimal. Checking the section 'Refactoring' in the
+<a href="https://code.visualstudio.com/docs/python/editing">documentation</a>, we can:</p>
+<ul>
+<li>Extract Variable</li>
+<li>Extract Method</li>
+<li>Sort Imports</li>
+</ul>
+<p>Don't ask me why there is no <strong>Inline</strong> - but at least there is something.</p>
+<p>The refactoring actions can be called from the command palette (<code>Ctrl+Shift+P</code>).
+Additionally one can provide one's own keyboard shortcuts. Because I don't want to
+memorize some (arbitrary) new set of commands I stick with the ones I know from
+eclipse.</p>
+<p>So, in order to define the settings: Open the command palette, search for
+<code>Shortcuts</code> and open the JSON-Config.</p>
+<div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;shift+alt+l&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;python.refactorExtractVariable&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;shift+alt+m&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;python.refactorExtractMethod&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;ctrl+shift+o&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;python.sortImports&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<p>Copy and paste the lines above, eh voilá. Now commit these to memory and get
+used to refactoring in python :)</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Di 21 Mai 2019</p>
+    <p>Category: <a href="https://flopska.com/category/computer-science.html">computer science</a>
+    </p>
+  </div>
+
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; flopska. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. View the <a href="https://flopska.com/pages/legal-details.html">Legal Details</a>.</p>
+    </div>
+  </main>
+</body>
+</html>

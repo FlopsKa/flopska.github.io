@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="https://flopska.com/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="flopska">
+  <meta name="description" content="Posts and writings by flopska">
+
+  <link href="https://flopska.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="flopska.com Atom" />
+
+<meta name="keywords" content="">
+
+  <title>
+    flopska.com
+&ndash; Speedup Vagrant Execution With a Ramdisk  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <h2><a href="https://flopska.com">flopska.com</a></h2>
+      <p>Software dev and data science. Currently pursuing my M.Sc. in Computer Science at KIT. In my free time I like to climb.</p>
+      <ul>
+        <li><a href="https://flopska.com/pages/about.html">About</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="https://flopska.com">Index</a> &brvbar; <a href="https://flopska.com/archives.html">Archives</a>
+      &brvbar; <a href="https://flopska.com/feeds/all.atom.xml">Atom</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/speedup-vagrant-execution-with-a-ramdisk.html">Speedup Vagrant Execution With a Ramdisk</a></h1>
+  </div>
+  <div class="article_text">
+    <p>Currently I am using <a href="http://www.vagrantup.com/">vagrant</a> in conjunction with
+<a href="http://www.vagrantup.com/">ansible</a> to provide all team members of our
+university project with a consistent development and testing environment.
+Before I push my changes I want to make sure that every ansible playbook I
+wrote is working and idempotent. To achieve this goal I have to test the
+scripts a lot and in doing so I spin up a dozen of new machines.</p>
+<p>To be able to run the necessary software the machines have to download a lot of
+packages. Some are only available as source and have to be compiled. Because
+the bottleneck when running the machines often lies within the HDD I thought it
+would be nice to speed it up a bit by putting the virtual machines on a
+ramdisk.</p>
+<h3>Setting up the ramdisk</h3>
+<p>In Ubuntu 13.10 'saucy' it is rather simple to set up a ramdisk:</p>
+<div class="highlight"><pre><span></span>sudo mkdir /media/ramdisk
+sudo mount -t ramfs ramfs /media/ramdisk
+sudo chown -R user:group /media/ramdisk
+</pre></div>
+
+
+<blockquote>
+<p><strong>Note:</strong> Please don't store any important information on the ramdisk as the
+data is lost when powering off the computer.</p>
+</blockquote>
+<p>To automatically mount the partition when booting add this to your
+<code>/etc/fstab</code>:</p>
+<div class="highlight"><pre><span></span>ramfs       /media/ramdisk      ramfs       defaults        0       0
+</pre></div>
+
+
+<p>It is not possible to limit the size of the ramdisk. In extreme cases the host
+system may run out of memory. </p>
+<h3>Moving vagrant and virtualbox into the RAM</h3>
+<p>Vagrant usually stores it's files in <code>~/.vagrant.d/</code>. To use another path set
+the VAGRANT_HOME environment variable.</p>
+<div class="highlight"><pre><span></span>cp -r ~/.vagrant.d /media/ramdisk/vagrant_home
+export VAGRANT_HOME=/media/ramdisk/vagrant_home
+</pre></div>
+
+
+<p>Now you have to change the location of your virtual machines from within
+virtualbox. Open the client by entering <code>virtualbox</code> into the terminal, go to
+'File -&gt; Preferences...' and enter your new ramdisk location as 'Default
+Machine Folder'.</p>
+<h3>Performance improvements</h3>
+<p><em>All tests were run with a new Vagrantfile and a 'raring64' box.</em></p>
+<p>Start up time without ramdisk:</p>
+<div class="highlight"><pre><span></span>time vagrant up
+...
+vagrant up  2,63s user 1,99s system 12% cpu 35,825 total
+</pre></div>
+
+
+<p>Start up time with ramdisk:</p>
+<div class="highlight"><pre><span></span>time vagrant up
+...
+vagrant up  2,55s user 2,07s system 17% cpu 26,853 total
+</pre></div>
+
+
+<p>As you can see starting the image from a ramdisk is faster than starting from a
+regular HDD. This is the case because vagrant copies the base box (in this case
+'raring64') before starting it. However, there are no performance gains while
+running the vm (tested with <code>hdparm -Tt /dev/sda</code>). This is  the case because
+virtualbox is already caching the hard drive access into the ram.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Mi 02 April 2014</p>
+    <p>Category: <a href="https://flopska.com/category/computer-science.html">computer science</a>
+    </p>
+  </div>
+
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; flopska. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. View the <a href="https://flopska.com/pages/legal-details.html">Legal Details</a>.</p>
+    </div>
+  </main>
+</body>
+</html>
