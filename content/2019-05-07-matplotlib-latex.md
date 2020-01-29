@@ -73,3 +73,5 @@ The resulting image looks like this, I think it's pretty neat.
 
 The sizes can also be adopted separately for each plot. For more information on font sizes, look [here](
 https://stackoverflow.com/questions/3899980/how-to-change-the-font-size-on-a-matplotlib-plot).
+
+Edit: [KarelZe](http://github.com/KarelZe) showed me another way to achieve this result: https://gist.github.com/KarelZe/778b77dcc8dd30e59dae8f14c139eb28
