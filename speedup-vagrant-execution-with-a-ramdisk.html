@@ -9,6 +9,9 @@
   <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/style.css">
   <link rel="stylesheet" type="text/css" href="https://flopska.com/theme/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+  <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+      crossorigin="anonymous">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +32,7 @@
   <aside>
     <div id="user_meta">
       <h2><a href="https://flopska.com">flopska.com</a></h2>
-      <p>Software dev and data science. Currently pursuing my M.Sc. in Computer Science at KIT. In my free time I like to climb.</p>
+      <p>Software dev and data science. Currently pursuing my PhD at KIT. In my free time I like to climb.</p>
       <ul>
         <li><a href="https://flopska.com/pages/about.html">About</a></li>
       </ul>
@@ -47,6 +50,9 @@
 <article>
   <div class="article_title">
     <h1><a href="https://flopska.com/speedup-vagrant-execution-with-a-ramdisk.html">Speedup Vagrant Execution With a Ramdisk</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Mi 02 April 2014</p>
   </div>
   <div class="article_text">
     <p>Currently I am using <a href="http://www.vagrantup.com/">vagrant</a> in conjunction with
@@ -74,7 +80,7 @@ data is lost when powering off the computer.</p>
 </blockquote>
 <p>To automatically mount the partition when booting add this to your
 <code>/etc/fstab</code>:</p>
-<div class="highlight"><pre><span></span>ramfs       /media/ramdisk      ramfs       defaults        0       0
+<div class="highlight"><pre><span></span><span class="err">ramfs       /media/ramdisk      ramfs       defaults        0       0</span>
 </pre></div>
 
 
@@ -83,8 +89,8 @@ system may run out of memory. </p>
 <h3>Moving vagrant and virtualbox into the RAM</h3>
 <p>Vagrant usually stores it's files in <code>~/.vagrant.d/</code>. To use another path set
 the VAGRANT_HOME environment variable.</p>
-<div class="highlight"><pre><span></span>cp -r ~/.vagrant.d /media/ramdisk/vagrant_home
-export VAGRANT_HOME=/media/ramdisk/vagrant_home
+<div class="highlight"><pre><span></span><span class="err">cp -r ~/.vagrant.d /media/ramdisk/vagrant_home</span>
+<span class="err">export VAGRANT_HOME=/media/ramdisk/vagrant_home</span>
 </pre></div>
 
 
@@ -95,16 +101,16 @@ Machine Folder'.</p>
 <h3>Performance improvements</h3>
 <p><em>All tests were run with a new Vagrantfile and a 'raring64' box.</em></p>
 <p>Start up time without ramdisk:</p>
-<div class="highlight"><pre><span></span>time vagrant up
-...
-vagrant up  2,63s user 1,99s system 12% cpu 35,825 total
+<div class="highlight"><pre><span></span><span class="err">time vagrant up</span>
+<span class="err">...</span>
+<span class="err">vagrant up  2,63s user 1,99s system 12% cpu 35,825 total</span>
 </pre></div>
 
 
 <p>Start up time with ramdisk:</p>
-<div class="highlight"><pre><span></span>time vagrant up
-...
-vagrant up  2,55s user 2,07s system 17% cpu 26,853 total
+<div class="highlight"><pre><span></span><span class="err">time vagrant up</span>
+<span class="err">...</span>
+<span class="err">vagrant up  2,55s user 2,07s system 17% cpu 26,853 total</span>
 </pre></div>
 
 
@@ -115,7 +121,6 @@ running the vm (tested with <code>hdparm -Tt /dev/sda</code>). This is  the case
 virtualbox is already caching the hard drive access into the ram.</p>
   </div>
   <div class="article_meta">
-    <p>Posted on: Mi 02 April 2014</p>
     <p>Category: <a href="https://flopska.com/category/computer-science.html">computer science</a>
     </p>
   </div>
@@ -125,7 +130,7 @@ virtualbox is already caching the hard drive access into the ram.</p>
 
 
     <div id="ending_message">
-      <p>&copy; flopska. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. View the <a href="https://flopska.com/pages/legal-details.html">Legal Details</a>.</p>
+      <p>&copy; flopska. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
   </main>
 </body>

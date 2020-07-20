@@ -45,7 +45,7 @@ eclipse.&lt;/p&gt;
 
 
 &lt;p&gt;Copy and paste the lines above, eh voilá. Now commit these to memory and get
-used to refactoring in python :)&lt;/p&gt;</content></entry><entry><title>Nice LaTeX Plots with Matplotlib</title><link href="https://flopska.com/nice-latex-plots-with-matplotlib.html" rel="alternate"></link><published>2019-05-07T00:00:00+02:00</published><updated>2019-05-07T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2019-05-07:/nice-latex-plots-with-matplotlib.html</id><summary type="html">&lt;p&gt;For my thesis I want the plots from jupyter notebook to integrate well with the rest of the LaTeX document. The article shows the settings necessary to achieve this look consistently by modifying the &lt;code&gt;matplotlibrc&lt;/code&gt;. Using this approach the correct settings are always used and I can't forget them.&lt;/p&gt;</summary><content type="html">&lt;p&gt;There exist various ways to use LaTeX fonts in the matplotlib plots. When I first googled this I came upon embedding &lt;code&gt;*.pgf&lt;/code&gt; files directly into the document which is then supposed to use the same font as the rest of the document. However I had problems with the correct size of the resulting images.&lt;/p&gt;
+used to refactoring in python :)&lt;/p&gt;</content><category term="computer science"></category></entry><entry><title>Nice LaTeX Plots with Matplotlib</title><link href="https://flopska.com/nice-latex-plots-with-matplotlib.html" rel="alternate"></link><published>2019-05-07T00:00:00+02:00</published><updated>2019-05-07T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2019-05-07:/nice-latex-plots-with-matplotlib.html</id><summary type="html">&lt;p&gt;For my thesis I want the plots from jupyter notebook to integrate well with the rest of the LaTeX document. The article shows the settings necessary to achieve this look consistently by modifying the &lt;code&gt;matplotlibrc&lt;/code&gt;. Using this approach the correct settings are always used and I can't forget them.&lt;/p&gt;</summary><content type="html">&lt;p&gt;There exist various ways to use LaTeX fonts in the matplotlib plots. When I first googled this I came upon embedding &lt;code&gt;*.pgf&lt;/code&gt; files directly into the document which is then supposed to use the same font as the rest of the document. However I had problems with the correct size of the resulting images.&lt;/p&gt;
 &lt;p&gt;Now I embed the &lt;code&gt;*.pdf&lt;/code&gt; files directly which has the added advantage that it is easy to preview the files without running LaTeX. Before I always saved two files per image: One pdf for viewing, one pgf for including.&lt;/p&gt;
 &lt;h2&gt;Setup&lt;/h2&gt;
 &lt;h3&gt;matplotlibrc&lt;/h3&gt;
@@ -97,7 +97,8 @@ used to refactoring in python :)&lt;/p&gt;</content></entry><entry><title>Nice L
 &lt;h3&gt;Result&lt;/h3&gt;
 &lt;p&gt;The resulting image looks like this, I think it's pretty neat.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Incremental Correlation Coefficient" src="https://flopska.com/images/correlation.png"&gt;&lt;/p&gt;
-&lt;p&gt;The sizes can also be adopted separately for each plot. For more information on font sizes, look &lt;a href="https://stackoverflow.com/questions/3899980/how-to-change-the-font-size-on-a-matplotlib-plot"&gt;here&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Redis Cluster als Basis für einen verteilten Chat</title><link href="https://flopska.com/redis-cluster-als-basis-fur-einen-verteilten-chat.html" rel="alternate"></link><published>2015-04-03T00:00:00+02:00</published><updated>2015-04-03T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2015-04-03:/redis-cluster-als-basis-fur-einen-verteilten-chat.html</id><summary type="html">&lt;p&gt;Wie schreibt man einen ausfallsicheren Chat für ein Uni-Projekt? Der Post detailliert die mögliche Umsetzung eines verteilten Chat-Systems auf Basis von Redis mit einem Java-Client. Der Load Balancer bleibt als Single Point of Failure - eine mögliche Lösung sind &lt;em&gt;Elastic IP&lt;/em&gt; Adressen.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;p&gt;The sizes can also be adopted separately for each plot. For more information on font sizes, look &lt;a href="https://stackoverflow.com/questions/3899980/how-to-change-the-font-size-on-a-matplotlib-plot"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Edit: &lt;a href="http://github.com/KarelZe"&gt;KarelZe&lt;/a&gt; showed me another way to achieve this result: https://gist.github.com/KarelZe/778b77dcc8dd30e59dae8f14c139eb28&lt;/p&gt;</content><category term="computer science"></category></entry><entry><title>Redis Cluster als Basis für einen verteilten Chat</title><link href="https://flopska.com/redis-cluster-als-basis-fur-einen-verteilten-chat.html" rel="alternate"></link><published>2015-04-03T00:00:00+02:00</published><updated>2015-04-03T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2015-04-03:/redis-cluster-als-basis-fur-einen-verteilten-chat.html</id><summary type="html">&lt;p&gt;Wie schreibt man einen ausfallsicheren Chat für ein Uni-Projekt? Der Post detailliert die mögliche Umsetzung eines verteilten Chat-Systems auf Basis von Redis mit einem Java-Client. Der Load Balancer bleibt als Single Point of Failure - eine mögliche Lösung sind &lt;em&gt;Elastic IP&lt;/em&gt; Adressen.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href="#anforderungen"&gt;Anforderungen&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#stack"&gt;Software Stack&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#softwarearchitektur"&gt;Software Architektur&lt;/a&gt;&lt;/li&gt;
@@ -135,30 +136,30 @@ http://localhost:8182/message/
 
 
 &lt;h4&gt;/user/&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;RESTUser&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;RESTUser&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 
-    &lt;span class="nd"&gt;@Put&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;Representation&lt;/span&gt; &lt;span class="nf"&gt;login&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ChatUser&lt;/span&gt; &lt;span class="n"&gt;chatUser&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="nd"&gt;@Put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;Representation&lt;/span&gt; &lt;span class="nf"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ChatUser&lt;/span&gt; &lt;span class="n"&gt;chatUser&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-    &lt;span class="nd"&gt;@Post&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ChatUser&lt;/span&gt; &lt;span class="nf"&gt;createUser&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ChatUser&lt;/span&gt; &lt;span class="n"&gt;chatUser&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="nd"&gt;@Post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;ChatUser&lt;/span&gt; &lt;span class="nf"&gt;createUser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ChatUser&lt;/span&gt; &lt;span class="n"&gt;chatUser&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Mit der &lt;em&gt;createUser(ChatUser chatUser)&lt;/em&gt; Methode kann ein neuer Benutzer am System registriert werden. Die E-Mail Adresse ist dabei eindeutig, d.h. es kann pro E-Mail Adresse nur einen Benutzer im System geben. Wird der Nutzer angelegt enthält der Rückgabewert die generierte ID und den Authentifizierungsschlüssel des neuen Benutzers.&lt;/p&gt;
 &lt;p&gt;Die &lt;em&gt;login(ChatUser chatUser)&lt;/em&gt; Methode wird zum Einloggen eines Benutzers verwendet. Der Benutzername und das Passwort werden überprüft und bei einer Übereinstimmung wird der entsprechende Authentifizierungsschlüssel als Cookie zurückgegeben. Bei einem Fehler sendet der Server ein HTTP Status &lt;em&gt;401&lt;/em&gt;.&lt;/p&gt;
 &lt;h4&gt;/message/&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;RESTMessage&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;RESTMessage&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 
-    &lt;span class="nd"&gt;@Post&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;Message&lt;/span&gt; &lt;span class="nf"&gt;sendMessage&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="nd"&gt;@Post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;Message&lt;/span&gt; &lt;span class="nf"&gt;sendMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-    &lt;span class="nd"&gt;@Get&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nf"&gt;readMessages&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+    &lt;span class="nd"&gt;@Get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nf"&gt;readMessages&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 
-&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -169,7 +170,7 @@ http://localhost:8182/message/
 &lt;p&gt;Der Chat verwendet die klassische Architektur für Webapplikationen: Die Anfragen der Nutzer werden von einem Load Balancer entgegen genommen und auf die Web Server verteilt. Soll eine größere Last verarbeitet werden, können weitere Web Server hinzugefügt werden. Die Authentifizierungsinformationen für Benutzer sind clientseitig in Cookies und serverseitig in der Datenbank gespeichert. Somit hält die Webapplikation keinen State: Fällt ein Server aus routet der Load Balancer die Anfragen an einen anderen Server und der Benutzer bemerkt nichts vom Ausfall eines Servers.&lt;/p&gt;
 &lt;p&gt;redis cluster hat einen Failover Mechanismus eingebaut: Beim Ausfall eines Masters wird automatisch ein bestehender Slave zum Master. In der verwendeten Konfiguration können also im Besten Fall bis zu drei Datenbankserver ausfallen.&lt;/p&gt;
 &lt;h3&gt;Ausblick &lt;a id="ausblick"&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;In der oben beschriebenen Konfiguration ist der Load Balancer ein Single Point of Failure. Eine Möglichkeit auf den Ausfall des Load Balancers zu reagieren ist der Einsatz von sogenannten &lt;em&gt;Elastic IP Addresses&lt;/em&gt; (siehe &lt;a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html"&gt;Elastic IP Addresses bei AWS&lt;/a&gt;). Fällt der Load Balancer aus kann seine IP zeitnah einem parallel laufenden Load Balancer zugewiesen werden.&lt;/p&gt;</content></entry><entry><title>Getting started with vagrant and ansible</title><link href="https://flopska.com/getting-started-with-vagrant-and-ansible.html" rel="alternate"></link><published>2014-04-22T00:00:00+02:00</published><updated>2014-04-22T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2014-04-22:/getting-started-with-vagrant-and-ansible.html</id><summary type="html">&lt;p&gt;A short summary of the steps necessary to install vagrant on a linux box and to start the first virtual machine with a precise32 base image.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://vagrantup.com"&gt;vagrant&lt;/a&gt; is a tool to create and configure reproducible
+&lt;p&gt;In der oben beschriebenen Konfiguration ist der Load Balancer ein Single Point of Failure. Eine Möglichkeit auf den Ausfall des Load Balancers zu reagieren ist der Einsatz von sogenannten &lt;em&gt;Elastic IP Addresses&lt;/em&gt; (siehe &lt;a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html"&gt;Elastic IP Addresses bei AWS&lt;/a&gt;). Fällt der Load Balancer aus kann seine IP zeitnah einem parallel laufenden Load Balancer zugewiesen werden.&lt;/p&gt;</content><category term="computer science"></category></entry><entry><title>Getting started with vagrant and ansible</title><link href="https://flopska.com/getting-started-with-vagrant-and-ansible.html" rel="alternate"></link><published>2014-04-22T00:00:00+02:00</published><updated>2014-04-22T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2014-04-22:/getting-started-with-vagrant-and-ansible.html</id><summary type="html">&lt;p&gt;A short summary of the steps necessary to install vagrant on a linux box and to start the first virtual machine with a precise32 base image.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://vagrantup.com"&gt;vagrant&lt;/a&gt; is a tool to create and configure reproducible
 development environments. Wat?!&lt;/p&gt;
 &lt;p&gt;Using virtual machines as your development environment has got multiple
 benefits: When you're a developer it's easy to provide every team member with
@@ -180,27 +181,27 @@ virtual machines to provision your production system.&lt;/p&gt;
 &lt;h3&gt;Sounds dope. Where can I get some?&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://www.vagrantup.com/downloads.html"&gt;Download&lt;/a&gt; the vagrant version for
 your system and install it. On Ubuntu that's &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dpkg -i vagrant_1.5.4_x86_64.deb
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;sudo dpkg -i vagrant_1.5.4_x86_64.deb&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Eventually you have to install the virtualbox packages, too. Enter&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install virtualbox
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;sudo apt-get install virtualbox&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;That's it. Now you're ready to setup your first virtual machine. Keep calm, I
 will guide you:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vagrant init hashicorp/precise32 
-vagrant up
-vagrant ssh
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;vagrant init hashicorp/precise32 &lt;/span&gt;
+&lt;span class="err"&gt;vagrant up&lt;/span&gt;
+&lt;span class="err"&gt;vagrant ssh&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Easy, heh? We just downloaded an Ubuntu precise image, created a so called
 &lt;a href="http://docs.vagrantup.com/v2/vagrantfile/index.html"&gt;Vagrantfile&lt;/a&gt;, booted the
 machine and connected to it. Halt the machine by disconnecting from the ssh
-session and entering &lt;code&gt;vagrant halt&lt;/code&gt;.&lt;/p&gt;</content></entry><entry><title>Speedup Vagrant Execution With a Ramdisk</title><link href="https://flopska.com/speedup-vagrant-execution-with-a-ramdisk.html" rel="alternate"></link><published>2014-04-02T00:00:00+02:00</published><updated>2014-04-02T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2014-04-02:/speedup-vagrant-execution-with-a-ramdisk.html</id><summary type="html">&lt;p&gt;As I am using vagrant for a university project I try to put the virtual machine onto a ramdisk for faster startup times. The post shows that when loading the machine from a ramdisk the startup time does improve. However, the machine itself does not run faster.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Currently I am using &lt;a href="http://www.vagrantup.com/"&gt;vagrant&lt;/a&gt; in conjunction with
+session and entering &lt;code&gt;vagrant halt&lt;/code&gt;.&lt;/p&gt;</content><category term="computer science"></category></entry><entry><title>Speedup Vagrant Execution With a Ramdisk</title><link href="https://flopska.com/speedup-vagrant-execution-with-a-ramdisk.html" rel="alternate"></link><published>2014-04-02T00:00:00+02:00</published><updated>2014-04-02T00:00:00+02:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2014-04-02:/speedup-vagrant-execution-with-a-ramdisk.html</id><summary type="html">&lt;p&gt;As I am using vagrant for a university project I try to put the virtual machine onto a ramdisk for faster startup times. The post shows that when loading the machine from a ramdisk the startup time does improve. However, the machine itself does not run faster.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Currently I am using &lt;a href="http://www.vagrantup.com/"&gt;vagrant&lt;/a&gt; in conjunction with
 &lt;a href="http://www.vagrantup.com/"&gt;ansible&lt;/a&gt; to provide all team members of our
 university project with a consistent development and testing environment.
 Before I push my changes I want to make sure that every ansible playbook I
@@ -225,7 +226,7 @@ data is lost when powering off the computer.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;To automatically mount the partition when booting add this to your
 &lt;code&gt;/etc/fstab&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ramfs       /media/ramdisk      ramfs       defaults        0       0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;ramfs       /media/ramdisk      ramfs       defaults        0       0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -234,8 +235,8 @@ system may run out of memory. &lt;/p&gt;
 &lt;h3&gt;Moving vagrant and virtualbox into the RAM&lt;/h3&gt;
 &lt;p&gt;Vagrant usually stores it's files in &lt;code&gt;~/.vagrant.d/&lt;/code&gt;. To use another path set
 the VAGRANT_HOME environment variable.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cp -r ~/.vagrant.d /media/ramdisk/vagrant_home
-export VAGRANT_HOME=/media/ramdisk/vagrant_home
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;cp -r ~/.vagrant.d /media/ramdisk/vagrant_home&lt;/span&gt;
+&lt;span class="err"&gt;export VAGRANT_HOME=/media/ramdisk/vagrant_home&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -246,16 +247,16 @@ Machine Folder'.&lt;/p&gt;
 &lt;h3&gt;Performance improvements&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;All tests were run with a new Vagrantfile and a 'raring64' box.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Start up time without ramdisk:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;time vagrant up
-...
-vagrant up  2,63s user 1,99s system 12% cpu 35,825 total
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;time vagrant up&lt;/span&gt;
+&lt;span class="err"&gt;...&lt;/span&gt;
+&lt;span class="err"&gt;vagrant up  2,63s user 1,99s system 12% cpu 35,825 total&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Start up time with ramdisk:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;time vagrant up
-...
-vagrant up  2,55s user 2,07s system 17% cpu 26,853 total
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;time vagrant up&lt;/span&gt;
+&lt;span class="err"&gt;...&lt;/span&gt;
+&lt;span class="err"&gt;vagrant up  2,55s user 2,07s system 17% cpu 26,853 total&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -263,4 +264,4 @@ vagrant up  2,55s user 2,07s system 17% cpu 26,853 total
 regular HDD. This is the case because vagrant copies the base box (in this case
 'raring64') before starting it. However, there are no performance gains while
 running the vm (tested with &lt;code&gt;hdparm -Tt /dev/sda&lt;/code&gt;). This is  the case because
-virtualbox is already caching the hard drive access into the ram.&lt;/p&gt;</content></entry></feed>
+virtualbox is already caching the hard drive access into the ram.&lt;/p&gt;</content><category term="computer science"></category></entry></feed>
