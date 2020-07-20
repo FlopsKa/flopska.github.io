@@ -3,14 +3,15 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'flopska'
-TAGLINE = 'Software dev and data science. Currently pursuing my M.Sc. in Computer Science at KIT. In my free time I like to climb.'
+TAGLINE = 'Software dev and data science. Currently pursuing my PhD at KIT. In my free time I like to climb.'
 SITENAME = 'flopska.com'
 SITEURL = 'http://localhost:8000'
 USER_LOGO_URL = SITEURL + '/images/logo.jpg'
 ROUND_USER_LOGO = True
 HIDE_USER_LOGO = True
-THEME = 'pelican-svbhack'
+THEME = '../pelican-svbhack'
 LOAD_CONTENT_CACHE = False
+PLUGINS = ['pelican_katex']
 
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
@@ -23,7 +24,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 #    ('About', '/pages/about.html'),
 #)
 
-PATH = 'content'
+PATH = 'content/pages'
 
 TIMEZONE = 'Europe/Paris'
 

@@ -1,11 +1,11 @@
 Title: About
-Date: 2019-05-04 18:52
+Date: 2020-07-20 14:36
 
 I'm Florian, welcome to my blog.
 
-I work as a software developer at Fiducia & GAD IT AG. In my free time I study
-computer science at KIT with an emphasis on machine learning where I am
-currently in the process of writing my master thesis.
+Currently I pursue my PhD at the Institute for Program & Data Structures (IPD) at KIT University.
+
+Before starting my PhD, I worked as a software developer at Fiducia & GAD IT AG. Here I helped to build the fraud detection system and what is called the "Smart Data Lab".
 
 This blog serves as a general notepad - I document some stuff I do or find out.
 I heard writing helps to organize one's thoughts, so, yeah...
