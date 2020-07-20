@@ -76,4 +76,4 @@ With this prediction we were able to reach the 2nd place in our practical course
 
 Taking part in the DMC was a very fun experience and everyone involved learned a lot. It made clear, once again, that solving real-world problems with machine learning is harder than one thinks.
 
-Scoring 11th place with the formlua given above also shows that a simple approach can trump over more sophisticated algorithms if the data and / or the problem at hand are an ill-fit for these algorithms.
+Scoring 11th place with the formula given above also shows that a simple approach can trump over more sophisticated algorithms if the data and / or the problem at hand are an ill-fit for these algorithms.
