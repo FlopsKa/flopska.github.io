@@ -127,7 +127,7 @@ points.
 
 Based on this last formula, we see that a point has a large local
 outlier factor if its neighbors are in dense areas (then the first sum
-becomes large) _and_ if these points are far away, i.e., the point as
+becomes large) _and_ if these points are far away, i.e., the point has
 no direct neighbors. It turns out that this notion captures the
 locality aspect of outlier detection surprisingly well.
 
