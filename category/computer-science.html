@@ -54,6 +54,25 @@
 
 <article>
   <div class="article_title">
+    <h1><a href="https://flopska.com/affine-transformations-in-python.html">Affine Transformations in Python</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Di 24 November 2020</p>
+  </div>
+  <div class="article_text">
+    <p>Here is just a short note on how to do an <a href="https://en.wikipedia.org/wiki/Affine_transformation">Affine
+Transformation</a>
+in Python succinctly.</p>
+<h1>Code</h1>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">ones</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># needed for the transformation</span>
+<span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="kp">size</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># create …</span></pre></div>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
     <h1><a href="https://flopska.com/understanding-the-local-outlier-factor-lof-algorithm.html">Understanding the Local Outlier Factor (LOF) Algorithm</a></h1>
   </div>
   <div class="article_meta">
