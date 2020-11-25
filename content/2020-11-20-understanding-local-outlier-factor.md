@@ -2,10 +2,10 @@ Title: Understanding the Local Outlier Factor (LOF) Algorithm
 Date: 2020-11-20
 Category: computer science
 
-This article tries to explain the well-known LOF-algorithm. We provide
-intuition for density-based outlier detection, show the problems
-inherent to this task and then take a look at how LOF solves these
-problems.
+This article tries to explain the highly popular LOF-algorithm. We
+provide intuition for density-based outlier detection, show the
+problems inherent to this task and then take a look at how LOF solves
+these problems.
 
 # Motivation
 
@@ -28,10 +28,11 @@ the most relevant. Note that both are closely linked.
 
 # Intuition
 
-The original paper [^Breunig et al.(2000)] introduced LOF as a
-density-based model. Going with the disambiguation from
-[^Aggarwal(2017)], this means that "the local density of a data point
-is used to define its outlier score". Let's visualize this:
+The original paper [^Breunig et al.(2000)] introduced the local
+outlier factor (LOF) as a density-based model. Going with the
+disambiguation from [^Aggarwal(2017)], this means that "the local
+density of a data point is used to define its outlier score". Let's
+visualize this:
 
 ![Outliers depend on local density](images/lof/intuition.png)
 
@@ -42,9 +43,14 @@ cluster on the top right.
 
 The idea of LOF is to look at the neighborhood of each point
 individually and to compute its "outlierness" based on its
-neighbors. So, in a sense, one estimates the density of the data
-distribution at each observed point and uses this to determine whether
-the point is an outlier.
+neighbors. To this end, one quantifies the difference of the density
+of the point to the density of its neighboring points. Put more
+bluntly: Imagine living in a villa in central Manhattan - then you are
+probably an outlier because Manhattan is a high-density area but you
+are in a less dense spot. Now, imagine living a rural area. Here you
+are also in a less dense spot but so are all of your neighbors and you
+are not an outlier.
+
 
 # Formal Definition
 
@@ -72,17 +78,21 @@ in our data set $D=\{o_1,\dots,o_5\}$ and we are interested in the
 $d(o_1,o_n)$ for all $n =2,\dots, 5$ and order the results. Assume
 these are the distances:
 
-$$d(o_1,o_2) = 0.2$$
-$$d(o_1,o_3) = 4.0$$
-$$d(o_1,o_4) = 0.5$$
-$$d(o_1,o_5) = 0.5 $$
+$
+\begin{aligned}
+d(o_1,o_2) &= 0.2\\
+d(o_1,o_3) &= 4.0\\
+d(o_1,o_4) &= 0.5\\
+d(o_1,o_5) &= 0.5
+\end{aligned}
+$
 
 Then our _3-distance_ is 0.5 and there are three objects in the neighborhood.
 
-In Euclidian space, think of this as putting a circle with its center
-at $o_1$ and increasing the radius until k elements are in it. As
-distances can be equal there might be more than k elements in the
-circle.
+In Euclidian space, think of this as putting a (hyper-)sphere with its
+center at $o_1$ and increasing the radius until k elements are in
+it. As distances can be equal there might be more than k elements in
+the circle.
 
 __reachability distance of an object p w.r.t. object o:__ Let $k$ be a
 natural number. The reachability distance of object $p$ w.r.t. $o$ is
@@ -102,6 +112,8 @@ density of p_ is defined as
 
 $$lrd_{MinPts}(p) = \frac{|N_{MinPts}(p)|} {\sum_{o \in N_{MinPts}(p)} reach-dist_{MinPts}(p,o)}.$$
 
+Here, _MinPts_ "replaces" parameter _k_ and we look at the _MinPts_-neighborhood of _p_.
+
 In general, a density is mass per volume, i.e., this definition implicitly assumes each element in the neighborhood of p to have unit mass. "The volume" is given by the sum of all reachability-distances of the element in the neighborhood of a point.
 
 With these preliminaries done, we can finally define the local outlier factor:
@@ -111,13 +123,13 @@ __(local) outlier factor of an object p:__ The _local outlier factor_ of p is de
 $$LOF_{MinPts}(p) = \frac{\sum_{o\in N_{MinPts}(p)}\frac{lrd_{MinPts}(o)}{lrd_{MinPts}(p)}}{|N_{MinPts}(p)|}.
 $$
 
-We can actually simplify this formula slightly,
+We can actually rewrite this formula slightly,
 
 $
 \begin{aligned}
 \frac{\sum_{o\in N_{MinPts}(p)}\frac{lrd_{MinPts}(o)}{lrd_{MinPts}(p)}}{|N_{MinPts}(p)|} &= \frac{\sum_{o\in N_{MinPts}(p)}lrd_{MinPts}(o)}{lrd_{MinPts}(p)|N_{MinPts}(p)|}\\
 &= \frac{\sum_{o\in N_{MinPts}(p)}lrd_{MinPts}(o)}{\frac{|N_{MinPts}(p)|} {\sum_{o \in N_{MinPts}(p)} reach-dist_{MinPts}(p,o)}|N_{MinPts}(p)|}\\
-&= \sum_{o\in N_{MinPts}(p)}lrd_{MinPts}(o)\sum_{o \in N_{MinPts}(p)} reach-dist_{MinPts}(p,o),
+&= \frac{\sum_{o\in N_{MinPts}(p)}lrd_{MinPts}(o)\sum_{o \in N_{MinPts}(p)} reach-dist_{MinPts}(p,o)}{|N_{MinPts}(p)|^2},
 \end{aligned}
 $
 
@@ -131,8 +143,24 @@ becomes large) _and_ if these points are far away, i.e., the point has
 no direct neighbors. It turns out that this notion captures the
 locality aspect of outlier detection surprisingly well.
 
+# Discussion
+
+The main algorithmic difficulty of LOF is finding the neighbors of
+each point in the data set. The scikit-learn implementation mitigates
+this problem by constructing a [Ball
+Tree](https://en.wikipedia.org/wiki/Ball_tree) or a
+[kd-tree](https://en.wikipedia.org/wiki/K-d_tree). To speed up the computation further, one could use a more fuzzy approach: Instead of of looking at a specific
+neighborhood one looks at a so-called " $\epsilon$-neighborhood" and thus allows a
+controllable error. See, e.g., [^Ram and Sinha(2019)].
+
+The main difficulty from a user's point of view is setting the
+parameter _k_ appropriately - the best value of _k_ depends on the
+data set and the algorithm is very sensitive with regard to its
+parameter.
+
 # References
 
 [^Hawkins(1980)]: D Hawkins. Identification of Outliers. Springer Netherlands, 1980.
 [^Aggarwal(2017)]: C C Aggarwal. Outlier Analysis. Springer International Publishing, 2nd ed., 2017.
 [^Breunig et al.(2000)]: M M Breunig et al. LOF: identifying density-based local outliers. Proceedings of the 2000 ACM SIGMOD international conference on Management of data (New York, NY, USA, May.-2000), 93–104.
+[^Ram and Sinha(2019)]: P Ram and K Sinha. Revisiting kd-tree for Nearest Neighbor Search. Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (Anchorage AK USA, Jul.-2019), 1378–1388.
