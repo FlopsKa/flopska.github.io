@@ -2,10 +2,10 @@ Title: Understanding the Local Outlier Factor (LOF) Algorithm
 Date: 2020-11-20
 Category: computer science
 
-This article tries to explain the highly popular LOF-algorithm. We
-provide intuition for density-based outlier detection, show the
-problems inherent to this task and then take a look at how LOF solves
-these problems.
+This article explains the well-known LOF-algorithm. We provide
+intuition for density-based outlier detection, show the problems
+inherent to this task and then take a look at how LOF solves these
+problems.
 
 # Motivation
 
