@@ -78,13 +78,12 @@ others by using their minimum. Let's do that!</p>
     <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">]},</span>
     <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;method&quot;</span><span class="p">)</span>
 <span class="n">test</span>
+</pre></div>
 
-<span class="err">!</span><span class="p">[</span><span class="n">Raw</span> <span class="n">Table</span><span class="p">](</span><span class="n">images</span><span class="o">/</span><span class="n">highlighting</span><span class="o">/</span><span class="n">raw_table</span><span class="o">.</span><span class="n">png</span><span class="p">)</span>
 
-<span class="n">Now</span><span class="p">,</span> <span class="n">define</span> <span class="n">the</span> <span class="n">function</span> <span class="n">which</span> <span class="n">does</span> <span class="n">the</span> <span class="n">magic</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">python</span>
-<span class="k">def</span> <span class="nf">bold_extreme_values</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">format_string</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">max_</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<p><img alt="Raw Table" src="images/highlighting/raw_table.png"></p>
+<p>Now, define the function which does the magic:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bold_extreme_values</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">format_string</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">max_</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">max_</span><span class="p">:</span>
         <span class="n">extrema</span> <span class="o">=</span> <span class="n">data</span> <span class="o">!=</span> <span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
