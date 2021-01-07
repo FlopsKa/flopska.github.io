@@ -28,6 +28,7 @@ test = pd.DataFrame({"foo" : [0,2,0,0.5,2,1],
 	"method": ["x","x","x","y","y","y"]},
 	index=[0,1,2,0,1,2]).pivot(columns="method")
 test
+```
 
 ![Raw Table](images/highlighting/raw_table.png)
 
