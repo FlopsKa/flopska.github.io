@@ -66,7 +66,8 @@ method &amp;amp;              x &amp;amp;              y &amp;amp;              
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And that's it :)&lt;/p&gt;</content><category term="computer science"></category></entry><entry><title>Affine Transformations in Python</title><link href="https://flopska.com/affine-transformations-in-python.html" rel="alternate"></link><published>2020-11-24T00:00:00+01:00</published><updated>2020-11-24T00:00:00+01:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2020-11-24:/affine-transformations-in-python.html</id><summary type="html">&lt;p&gt;Here is just a short note on how to do an &lt;a href="https://en.wikipedia.org/wiki/Affine_transformation"&gt;Affine
+&lt;p&gt;And that's it :)&lt;/p&gt;
+&lt;p&gt;EDIT: Martin Isaksson built upon this, see &lt;a href="https://blog.martisak.se/2021/04/10/publication_ready_tables/"&gt;here&lt;/a&gt;. Thanks for letting me know!&lt;/p&gt;</content><category term="computer science"></category></entry><entry><title>Affine Transformations in Python</title><link href="https://flopska.com/affine-transformations-in-python.html" rel="alternate"></link><published>2020-11-24T00:00:00+01:00</published><updated>2020-11-24T00:00:00+01:00</updated><author><name>flopska</name></author><id>tag:flopska.com,2020-11-24:/affine-transformations-in-python.html</id><summary type="html">&lt;p&gt;Here is just a short note on how to do an &lt;a href="https://en.wikipedia.org/wiki/Affine_transformation"&gt;Affine
 Transformation&lt;/a&gt;
 in Python succinctly.&lt;/p&gt;
 &lt;h1&gt;Code&lt;/h1&gt;
