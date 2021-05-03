@@ -75,3 +75,4 @@ method &              x &              y &              x &              y \\
 
 And that's it :)
 
+EDIT: Martin Isaksson built upon this, see [here](https://blog.martisak.se/2021/04/10/publication_ready_tables/). Thanks for letting me know!
