@@ -13,16 +13,16 @@ THEME = '../pelican-svbhack'
 LOAD_CONTENT_CACHE = False
 PLUGINS = ['pelican_katex']
 
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
-#MENUITEMS = (
-#    ('Home', '/'),
-#    ('CS', '/category/cs.html'),
+MENUITEMS = (
+    ('Home', '/'),
+    ('Publications', '/pages/publications.html'),
 #    ('Books', '/category/books.html'),
 #    ('Climbing', '/category/climbing.html'),
 #    ('DIY', '/category/diy.html'),
-#    ('About', '/pages/about.html'),
-#)
+    ('About', '/pages/about.html'),
+)
 
 PATH = 'content/pages'
 
