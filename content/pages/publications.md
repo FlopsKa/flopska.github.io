@@ -1,7 +1,10 @@
 Title: Publications
-Date: 2021-05-03
+Date: 2021-06-29
 
 # 2021
+
+F. Kalinke, P. Bielski, S. Singh, E. Fouché, and Klemens Böhm:
+[An Evaluation of NILM Approaches on Industrial Energy-Consumption Data.](https://doi.org/10.1145/3447555.3464863) e-Energy 2021: 239-243
 
 E. Fouché, F. Kalinke, and K. Böhm: [Efficient subspace search in data streams,](https://doi.org/10.1016/j.is.2020.101705) Information Systems 97 (2021)
 
