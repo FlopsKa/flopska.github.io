@@ -1,32 +1,14 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
-
-AUTHOR = 'flopska'
-TAGLINE = 'Software dev and data science. Currently pursuing my PhD at KIT. In my free time I like to climb.'
+AUTHOR = 'Florian Kalinke'
 SITENAME = 'flopska.com'
-SITEURL = 'http://localhost:8000'
+SITEURL = ''
 USER_LOGO_URL = '/images/logo.jpg'
 ROUND_USER_LOGO = True
 HIDE_USER_LOGO = False
-THEME = '../pelican-svbhack'
-LOAD_CONTENT_CACHE = False
-PLUGINS = ['pelican_katex']
+TAGLINE = 'Data science.</br>Pursuing my PhD at KIT.</br>Climbing.'
 
-DISPLAY_PAGES_ON_MENU = False
-DISPLAY_CATEGORIES_ON_MENU = False
-MENUITEMS = (
-    ('Home', '/'),
-    ('Publications', '/pages/publications.html'),
-#    ('Books', '/category/books.html'),
-#    ('Climbing', '/category/climbing.html'),
-#    ('DIY', '/category/diy.html'),
-    ('About', '/pages/about.html'),
-)
+PATH = 'content'
 
-PATH = 'content/pages'
-
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = 'en'
 
@@ -36,15 +18,32 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+DISPLAY_CATEGORIES_ON_MENU = False
+#PLUGINS = ['pelican_katex']
+
+MENUITEMS = (
+    ('Publications', '/publications.html'),
+    ('Imprint / Impressum', '/legal-details.html'),
+
+#    ('Books', '/category/books.html'),
+#    ('Climbing', '/category/climbing.html'),
+#    ('DIY', '/category/diy.html'),
+#    ('About', '/pages/about.html'),
+)
 
 # Blogroll
-#LINKS = (('routestack', 'https://routestack.de/'),)
+#LINKS = (('Pelican', 'https://getpelican.com/'),
+#         ('Python.org', 'https://www.python.org/'),
+#         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
+#         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-#SOCIAL = (('XING', 'https://www.xing.com/profile/Florian_Kalinke/cv'),
-#        ('github.com/flopska','https://github.com/flopska'))
+#SOCIAL = (('You can add links in your config file', '#'),
+#          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = False
+
+THEME = '../svbhack2'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
