@@ -19,6 +19,15 @@ hr {
 img {
   max-width: 100%;
 }
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 4px;
+  border-width: thin;
+  border-style: solid;
+}
 .round-img {
   border-radius: 50%;
   padding: 2px;
@@ -115,6 +124,26 @@ main article div.article_text div.imageblock {
   margin: 5px;
   border: 1px solid #eeeeee;
   padding: 5px;
+}
+main article div.article_text figure {
+  margin: 5px;
+  border: 1px solid #eeeeee;
+  padding: 5px;
+}
+main article div.article_text figcaption {
+  text-align: center;
+}
+main article div.article_text h1 a.headerlink,
+main article div.article_text h2 a.headerlink,
+main article div.article_text h3 a.headerlink,
+main article div.article_text h4 a.headerlink {
+  visibility: hidden;
+}
+main article div.article_text h1:hover a.headerlink,
+main article div.article_text h2:hover a.headerlink,
+main article div.article_text h3:hover a.headerlink,
+main article div.article_text h4:hover a.headerlink {
+  visibility: visible;
 }
 main article div.gist {
   line-height: .875em;

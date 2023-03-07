@@ -41,6 +41,16 @@ img {
   max-width: 100%;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 4px;
+    border-width: thin;
+    border-style: solid;
+}
+
 .round-img {
   border-radius: 50%;
   padding: 2px;
@@ -156,6 +166,27 @@ main {
         margin: 5px;
         border: 1px solid @light-grey;
         padding: 5px;
+      }
+
+      // figure and figcaption are used by the markdown_captions markdown extension.
+      figure {
+        margin: 5px;
+        border: 1px solid @light-grey;
+        padding: 5px;
+      }
+      figcaption {
+	text-align: center;
+      }
+
+      h1, h2, h3, h4 {
+        a.headerlink {
+	  visibility:hidden;
+        }
+      }
+      h1:hover, h2:hover, h3:hover, h4:hover {
+        a.headerlink {
+	  visibility:visible;
+        }
       }
     }
 
