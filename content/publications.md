@@ -3,13 +3,16 @@ Date: 2023-03-06
 
 # 2023
 
+F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/), and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Technical Report, 2023. </br>
+[paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
+
 F. Kalinke, and [Z. Szabó](https://zoltansz.github.io/). __Nyström M-Hilbert-Schmidt Independence Criterion.__ Technical Report, 2023. </br>
 [paper](https://arxiv.org/abs/2302.09930) (arXiv) | [code](https://github.com/FlopsKa/nystroem-mhsic)
 
 # 2022
 
 F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/), and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Scalable Online Change Detection for High-dimensional Data Streams.__ Technical Report, 2022.</br>
-[paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
+[paper](https://arxiv.org/abs/2205.12706v1) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector) | [updated version](https://arxiv.org/abs/2205.12706) (arXiv)
 
 # 2021
 
