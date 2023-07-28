@@ -3,11 +3,13 @@ Date: 2023-03-06
 
 # 2023
 
+F. Kalinke, and [Z. Szabó](https://zoltansz.github.io/). __Nyström M-Hilbert-Schmidt Independence Criterion.__ Proceedings of the Thirty-Ninth Conference on Uncertainty in Artificial Intelligence (UAI), PMLR 216:1005-1015, 2023.  </br>
+[paper](https://proceedings.mlr.press/v216/kalinke23a/kalinke23a.pdf) (UAI) | [supplement](https://proceedings.mlr.press/v216/kalinke23a/kalinke23a-supp.pdf) (UAI) | [poster](publications/kalinke23-poster.pdf) |  [slides](publications/kalinke23-spotlight.pdf) |  [paper](https://arxiv.org/abs/2302.09930) (arXiv) | [code](https://github.com/FlopsKa/nystroem-mhsic)
+
+
 F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/), and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Technical Report, 2023. </br>
 [paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
 
-F. Kalinke, and [Z. Szabó](https://zoltansz.github.io/). __Nyström M-Hilbert-Schmidt Independence Criterion.__ Technical Report, 2023. </br>
-[paper](https://arxiv.org/abs/2302.09930) (arXiv) | [code](https://github.com/FlopsKa/nystroem-mhsic)
 
 # 2022
 

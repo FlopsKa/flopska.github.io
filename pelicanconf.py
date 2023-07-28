@@ -21,6 +21,8 @@ AUTHOR_FEED_RSS = None
 DISPLAY_CATEGORIES_ON_MENU = False
 #PLUGINS = ['pelican_katex']
 
+STATIC_PATHS = ["images", "publications", "CNAME"]
+
 MENUITEMS = (
     ('Publications', '/publications.html'),
     ('Imprint / Impressum', '/legal-details.html'),
