@@ -1,7 +1,10 @@
 Title: Articles
-Date: 2024-01-15
+Date: 2024-02-05
 
 # Preprints
+
+[T. Fuchs](https://tobiasfuchs.de/), F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Uncertainty-Aware Partial-Label Learning.__ Technical Report, 2024. </br>
+[paper](https://arxiv.org/abs/2402.00592) (arXiv) | [code](https://github.com/anon1248/uncertainty-aware-pll)
 
 F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/) and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Technical Report, 2023. </br>
 [paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
