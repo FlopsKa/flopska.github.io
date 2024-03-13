@@ -1,7 +1,10 @@
 Title: Articles
-Date: 2024-02-05
+Date: 2024-03-13
 
 # Preprints
+
+F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Rate of HSIC Estimation for Translation-Invariant Kernels.__ Technical Report, 2024.  </br>
+[paper](https://arxiv.org/pdf/2403.07735.pdf) (arXiv)
 
 [T. Fuchs](https://tobiasfuchs.de/), F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Uncertainty-Aware Partial-Label Learning.__ Technical Report, 2024. </br>
 [paper](https://arxiv.org/abs/2402.00592) (arXiv) | [code](https://github.com/anon1248/uncertainty-aware-pll)
