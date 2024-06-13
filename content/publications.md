@@ -3,6 +3,10 @@ Date: 2024-03-13
 
 # Preprints
 
+
+F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ Technical Report, 2024. </br>
+[paper](https://arxiv.org/abs/2406.08401) (arXiv) | [code](https://github.com/FlopsKa/nystroem-ksd)
+
 F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Rate of HSIC Estimation for Translation-Invariant Kernels.__ Technical Report, 2024.  </br>
 [paper](https://arxiv.org/abs/2403.07735) (arXiv)
 
