@@ -17,10 +17,11 @@
 
   <link href="https://flopska.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="flopska.com Atom" />
 
+<meta name="keywords" content="">
 
   <title>
     flopska.com
-&ndash; Tag: statistics  </title>
+&ndash; Getting started with vagrant and ansible  </title>
 
 </head>
 
@@ -44,27 +45,55 @@
       <p>
       <a href="https://flopska.com">Index</a> &brvbar; <a href="https://flopska.com/archives.html">Archives</a>
       &brvbar; <a href="https://flopska.com/feeds/all.atom.xml">Atom</a>
-&gt; Tag: statistics
       </p>
     </header>
 
 <article>
   <div class="article_title">
-    <h1><a href="https://flopska.com/notes-on-the-limiting-distribution-of-incomplete-u-statistics.html">Notes on the limiting distribution of incomplete U-statistics</a></h1>
+    <h1><a href="https://flopska.com/getting-started-with-vagrant-and-ansible.html">Getting started with vagrant and ansible</a></h1>
   </div>
   <div class="article_meta">
-    <p>Posted on: Mon 04 November 2024</p>
+    <p>Posted on: Tue 22 April 2014</p>
   </div>
   <div class="article_text">
-    <p><link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-      crossorigin="anonymous"></p>
-<p>The main results on the limiting distributions of incomplete U-statistics were developed in Blom (1976)<sup id="fnref:blom1976incomplete"><a class="footnote-ref" href="#fn:blom1976incomplete">1</a></sup> and Janson (1984)<sup id="fnref:janson1984incomplete"><a class="footnote-ref" href="#fn:janson1984incomplete">2</a></sup>; Lee (1990)<sup id="fnref:lee1990ustats"><a class="footnote-ref" href="#fn:lee1990ustats">3</a></sup> gives a summary. However, for my taste, the proofs in Janson (1984) are somewhat hard to read. Lee (1990) improves upon those but has some inaccuracies---the main …</p>
+    <p><a href="http://vagrantup.com">vagrant</a> is a tool to create and configure reproducible
+development environments. Wat?!</p>
+<p>Using virtual machines as your development environment has got multiple
+benefits: When you're a developer it's easy to provide every team member with
+the same environment. When your a designer you don't have the hassle of setting
+up the workspace and can focus on the design instead. When you're done and want
+to deploy your software you can use the same process you used to setup your
+virtual machines to provision your production system.</p>
+<h3>Sounds dope. Where can I get some?</h3>
+<p><a href="http://www.vagrantup.com/downloads.html">Download</a> the vagrant version for
+your system and install it. On Ubuntu that's </p>
+<div class="highlight"><pre><span></span><code>sudo dpkg -i vagrant_1.5.4_x86_64.deb
+</code></pre></div>
+
+<p>Eventually you have to install the virtualbox packages, too. Enter</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install virtualbox
+</code></pre></div>
+
+<p>That's it. Now you're ready to setup your first virtual machine. Keep calm, I
+will guide you:</p>
+<div class="highlight"><pre><span></span><code>vagrant init hashicorp/precise32 
+vagrant up
+vagrant ssh
+</code></pre></div>
+
+<p>Easy, heh? We just downloaded an Ubuntu precise image, created a so called
+<a href="http://docs.vagrantup.com/v2/vagrantfile/index.html">Vagrantfile</a>, booted the
+machine and connected to it. Halt the machine by disconnecting from the ssh
+session and entering <code>vagrant halt</code>.</p>
   </div>
+  <div class="article_meta">
+    <p>Category: <a href="https://flopska.com/category/computer-science.html">computer science</a>
+    </p>
+  </div>
+
+
 </article>
 
-<footer>
-</footer>
 
     <div id="ending_message">
       <p>&copy; Florian Kalinke. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>

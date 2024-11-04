@@ -50,7 +50,7 @@
 
 <article>
   <div class="article_title">
-    <h1><a href="https://flopska.com/some-notes-on-incomplete-u-statistics.html">Some notes on incomplete U-statistics</a></h1>
+    <h1><a href="https://flopska.com/notes-on-the-limiting-distribution-of-incomplete-u-statistics.html">Notes on the limiting distribution of incomplete U-statistics</a></h1>
   </div>
   <div class="article_meta">
     <p>Posted on: Mon 04 November 2024</p>
@@ -65,18 +65,157 @@
 <hr />
 <article>
   <div class="article_title">
-    <h1><a href="https://flopska.com/articles.html">Articles</a></h1>
+    <h1><a href="https://flopska.com/highlighting-pandas-to_latex-output-in-bold-face-for-extreme-values.html">Highlighting pandas .to_latex() output in bold face for extreme values</a></h1>
   </div>
   <div class="article_meta">
-    <p>Posted on: Fri 27 September 2024</p>
+    <p>Posted on: Thu 07 January 2021</p>
   </div>
   <div class="article_text">
-    <h1>Preprints</h1>
-<p>F. Kalinke, <a href="https://zoltansz.github.io/">Z. Szabó</a> and <a href="https://bharathsv.github.io/">B. K. Sriperumbudur</a>. <strong>Nyström Kernel Stein Discrepancy.</strong> Technical Report, 2024. </br>
-<a href="https://arxiv.org/abs/2406.08401">paper</a> (arXiv) | <a href="https://github.com/FlopsKa/nystroem-ksd">code</a></p>
-<p><a href="https://tobiasfuchs.de/">T. Fuchs</a>, F. Kalinke and <a href="https://scholar.google.com/citations?user=RzCtTjYAAAAJ">K. Böhm</a>. <strong>Uncertainty-Aware Partial-Label Learning.</strong> Technical Report, 2024. </br>
-<a href="https://arxiv.org/abs/2402.00592">paper</a> (arXiv) | <a href="https://github.com/anon1248/uncertainty-aware-pll">code</a></p>
-<p>F. Kalinke, <a href="https://scholar.google.com/citations?user=VJeY0WcAAAAJ">M. Heyden</a>, <a href="https://edouardfouche.com/">E. Fouché</a> and <a href="https://scholar.google.com/citations?user=RzCtTjYAAAAJ">K. Böhm</a>. <strong>Maximum Mean Discrepancy on Exponential Windows …</strong></p>
+    <p>When preparing a table with experimental results for publication, one
+often wishes to highlight the output of extreme cells, for example by
+putting them in bold.</p>
+<p>However, pandas does not readily support this use case. The closest
+one gets with stock pandas is <code>table.style.highlight_max(axis=1)</code>
+which highlights …</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/affine-transformations-in-python.html">Affine transformations in python</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Tue 24 November 2020</p>
+  </div>
+  <div class="article_text">
+    <p>Here is just a short note on how to do an <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine
+transformation</a>
+in python succinctly.</p>
+<h1>Code</h1>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">1000</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="c1"># needed for the transformation</span>
+<span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="c1"># create …</span></code></pre></div>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/understanding-the-local-outlier-factor-lof-algorithm.html">Understanding the local outlier factor (LOF) algorithm</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Fri 20 November 2020</p>
+  </div>
+  <div class="article_text">
+    <p><link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+      crossorigin="anonymous"></p>
+<p>This article explains the well-known LOF-algorithm. We provide
+intuition for density-based outlier detection, show the problems
+inherent to this task and then take a look at how LOF solves these
+problems.</p>
+<h1>Motivation</h1>
+<p>Outlier detection is important for many real world applications -
+typical examples include fraud detection, network intrusion detection
+or …</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/the-repertoire-method-and-the-radix-based-solution-to-the-josephus-problem.html">The repertoire method and the radix-based solution to the Josephus problem</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Fri 31 July 2020</p>
+  </div>
+  <div class="article_text">
+    <p><link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+      crossorigin="anonymous"></p>
+<p>This post summarizes how one uses the repertoire method (as presented in Concrete Mathematics by Graham, Knuth and Patashnik). First we look at the repertoire method without the need for a radix-based solution and afterwards we discuss the solution given in the book for Exercise 16.</p>
+<h1>General method</h1>
+<p>Suppose we …</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/a-hint-of-eclipse-in-visual-code.html">A hint of Eclipse in Visual Code</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Tue 21 May 2019</p>
+  </div>
+  <div class="article_text">
+    <p>Professionally I am a heavy eclipse user. I heard that IntelliJ is better by now
+but I have yet to make the switch. However, the focus of eclipse clearly is Java
+programming. For my own projects I tend to use python - and while vim is awesome
+I prefer the support …</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/nice-latex-plots-with-matplotlib.html">Nice LaTeX plots with matplotlib</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Tue 07 May 2019</p>
+  </div>
+  <div class="article_text">
+    <p>For my thesis I want the plots from jupyter notebook to integrate well with the rest of the LaTeX document. The article shows the settings necessary to achieve this look consistently by modifying the <code>matplotlibrc</code>. Using this approach the correct settings are always used and I can't forget them.</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/data-mining-cup-2018.html">Data Mining Cup 2018</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Sat 04 May 2019</p>
+  </div>
+  <div class="article_text">
+    <p><link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+      crossorigin="anonymous"></p>
+<p>As part of a practical course from IPD we took part in this years' Data Mining Cup (DMC) sponsored by prodsys.</p>
+<p>The DMC is a yearly competition where teams from universities around the world try to solve a data mining task. To quote the task from the <a href="https://www.data-mining-cup.com/reviews/dmc-2018/">official website</a>:</p>
+<blockquote>
+<p>The …</p></blockquote>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/redis-cluster-als-basis-fur-einen-verteilten-chat.html">Redis Cluster als Basis für einen verteilten Chat</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Fri 03 April 2015</p>
+  </div>
+  <div class="article_text">
+    <p>Wie schreibt man einen ausfallsicheren Chat für ein Uni-Projekt? Der Post detailliert die mögliche Umsetzung eines verteilten Chat-Systems auf Basis von Redis mit einem Java-Client. Der Load Balancer bleibt als Single Point of Failure - eine mögliche Lösung sind <em>Elastic IP</em> Adressen.</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/getting-started-with-vagrant-and-ansible.html">Getting started with vagrant and ansible</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Tue 22 April 2014</p>
+  </div>
+  <div class="article_text">
+    <p>A short summary of the steps necessary to install vagrant on a linux box and to start the first virtual machine with a precise32 base image.</p>
+  </div>
+</article>
+<hr />
+<article>
+  <div class="article_title">
+    <h1><a href="https://flopska.com/speedup-vagrant-execution-with-a-ramdisk.html">Speedup vagrant execution with a ramdisk</a></h1>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Wed 02 April 2014</p>
+  </div>
+  <div class="article_text">
+    <p>As I am using vagrant for a university project I try to put the virtual machine onto a ramdisk for faster startup times. The post shows that when loading the machine from a ramdisk the startup time does improve. However, the machine itself does not run faster.</p>
   </div>
 </article>
 
