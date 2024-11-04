@@ -1,14 +1,10 @@
 Title: Articles
-Date: 2024-06-13
+Date: 2024-09-27
 
 # Preprints
 
-
 F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ Technical Report, 2024. </br>
 [paper](https://arxiv.org/abs/2406.08401) (arXiv) | [code](https://github.com/FlopsKa/nystroem-ksd)
-
-F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Rate of HSIC Estimation for Translation-Invariant Kernels.__ Technical Report, 2024.  </br>
-[paper](https://arxiv.org/abs/2403.07735) (arXiv)
 
 [T. Fuchs](https://tobiasfuchs.de/), F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Uncertainty-Aware Partial-Label Learning.__ Technical Report, 2024. </br>
 [paper](https://arxiv.org/abs/2402.00592) (arXiv) | [code](https://github.com/anon1248/uncertainty-aware-pll)
@@ -16,7 +12,11 @@ F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Rate of H
 F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/) and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Technical Report, 2023. </br>
 [paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
 
-# 2024 
+
+# 2024
+
+F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Rate of HSIC Estimation for Translation-Invariant Kernels.__ Advances in Neural Information Processing Systems (NeurIPS), 2024. To appear.  </br>
+[paper](https://arxiv.org/abs/2403.07735) (arXiv)
 
 [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/), V. Arzamasov, T. Fenn, F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Adaptive Bernstein Change Detector for High-Dimensional Data Streams.__ Data Mining and Knowledge Discovery (2024): 1-30. </br>
 [paper](publications/heyden24-article.pdf) (author version) | [paper](https://doi.org/10.1007/s10618-023-00999-5) (Springer) | [paper](https://arxiv.org/abs/2306.12974) (arXiv) | [code](https://github.com/heymarco/AdaptiveBernsteinChangeDetector)
@@ -38,8 +38,7 @@ F. Kalinke, P. Bielski, [S. Singh](https://scholar.google.com/citations?user=AUW
 
 [E. Fouché](https://edouardfouche.com/), F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Efficient subspace search in data streams.__ Information Systems 97 (2021).</br> [paper](https://doi.org/10.1016/j.is.2020.101705) | [code](https://github.com/edouardfouche/SGMRD)
 
+
 # 2020
 
 [E. Fouché](https://edouardfouche.com/), A. Mazankiewicz, F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __A framework for dependency estimation in heterogeneous data streams.__ Distributed and Parallel Databases (2020).</br> [paper](https://link.springer.com/article/10.1007%2Fs10619-020-07295-x) | [code](https://github.com/edouardfouche/MCDE-extended)
-
-

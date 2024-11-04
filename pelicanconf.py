@@ -4,7 +4,7 @@ SITEURL = ''
 USER_LOGO_URL = '/images/logo.jpg'
 ROUND_USER_LOGO = True
 HIDE_USER_LOGO = False
-TAGLINE = 'Data science.</br>Pursuing my PhD at KIT.</br>Climbing.'
+TAGLINE = 'Statistical machine learning.</br>Kernel methods.</br>PhD student at KIT.</br>Climbing.'
 
 PATH = 'content'
 
@@ -19,7 +19,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 DISPLAY_CATEGORIES_ON_MENU = False
-#PLUGINS = ['pelican_katex']
+PLUGINS = ['pelican_katex']
 
 STATIC_PATHS = ["images", "publications", "CNAME"]
 
@@ -49,3 +49,10 @@ THEME = '../svbhack2'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+## Shared katex conf across all files
+KATEX_PREAMBLE = r"""
+\renewcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Var}{\mathrm{Var}}
+"""
