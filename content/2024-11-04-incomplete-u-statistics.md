@@ -1,7 +1,6 @@
-Title: Some notes on incomplete U-statistics
+Title: Notes on the limiting distribution of incomplete U-statistics
 Date: 2024-11-04
 Tags: statistics; notes
-Author: Florian Kalinke
 
 <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
