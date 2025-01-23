@@ -57,7 +57,7 @@ By Lemma A (p. 201; Lee, 1990) the conditional expectation converges in distribu
 $$\begin{align*}
 \lim_{n,m\to\infty}\phi_{n,m}(t) &= \lim_{n\to\infty}\E\exp\left(it\;m^{1/2}(U_n-\theta)\right)e^{-t^2\sigma_k^2/2} \\
 &=  \lim_{n\to\infty}\E\exp\left(it\;m^{1/2}n^{-(d+1)/2}n^{(d+1)/2}(U_n-\theta)\right)e^{-t^2\sigma_k^2/2} \\
-&= \phi\left(\alpha^{-1/2}\right)e^{-t^2\sigma_k^2/2},
+&= \phi\left(\alpha^{-1/2}t\right)e^{-t^2\sigma_k^2/2},
 \end{align*}$$
 where we used the assumptions in the last equality. The result is the c.f. of a random variable with the stated limit, concluding the proof.
 

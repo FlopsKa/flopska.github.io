@@ -2,17 +2,23 @@ Title: Articles
 Date: 2024-09-27
 Status: hidden
 
-# Preprints
 
-F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ Technical Report, 2024. </br>
+
+
+
+
+
+# 2025
+
+
+F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2025. To appear. </br>
 [paper](https://arxiv.org/abs/2406.08401) (arXiv) | [code](https://github.com/FlopsKa/nystroem-ksd)
 
-[T. Fuchs](https://tobiasfuchs.de/), F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Uncertainty-Aware Partial-Label Learning.__ Technical Report, 2024. </br>
-[paper](https://arxiv.org/abs/2402.00592) (arXiv) | [code](https://github.com/anon1248/uncertainty-aware-pll)
+F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/) Georg Gntuni and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Transactions on Machine Learning Research, 2025. To appear. </br>
+[paper](https://openreview.net/forum?id=OGaTF9iOxi) (OpenReview) | [paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
 
-F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/) and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Technical Report, 2023. </br>
-[paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
-
+[T. Fuchs](https://tobiasfuchs.de/), F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Partial-Label Learning with a Reject Option.__ Transactions on Machine Learning Research, 2025. </br>
+[paper](https://openreview.net/forum?id=wS1fD0ofay) (OpenReview) | [paper](https://arxiv.org/abs/2402.00592) (arXiv) | [code](https://github.com/mathefuchs/pll-with-a-reject-option)
 
 # 2024
 
