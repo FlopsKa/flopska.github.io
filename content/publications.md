@@ -1,20 +1,18 @@
 Title: Articles
-Date: 2025-01-23
+Date: 2025-02-12
 Status: hidden
 
+# Preprints
 
-
-
-
-
+[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Technical report, 2025. </br>
+[paper](https://arxiv.org/abs/2502.07661) (arXiv) 
 
 # 2025
-
 
 F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2025. To appear. </br>
 [paper](https://arxiv.org/abs/2406.08401) (arXiv) | [code](https://github.com/FlopsKa/nystroem-ksd)
 
-F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/) Georg Gntuni and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Transactions on Machine Learning Research, 2025. To appear. </br>
+F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/) Georg Gntuni and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Transactions on Machine Learning Research, 2025. </br>
 [paper](https://openreview.net/forum?id=OGaTF9iOxi) (OpenReview) | [paper](https://arxiv.org/abs/2205.12706) (arXiv) | [code](https://github.com/FlopsKa/mmdew-change-detector)
 
 [T. Fuchs](https://tobiasfuchs.de/), F. Kalinke and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Partial-Label Learning with a Reject Option.__ Transactions on Machine Learning Research, 2025. </br>

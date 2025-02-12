@@ -6,7 +6,7 @@ Category: data science
 <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
       crossorigin="anonymous">
-
+      
 As part of a practical course from IPD we took part in this years' Data Mining Cup (DMC) sponsored by prodsys.
 
 The DMC is a yearly competition where teams from universities around the world try to solve a data mining task. To quote the task from the [official website](https://www.data-mining-cup.com/reviews/dmc-2018/):
