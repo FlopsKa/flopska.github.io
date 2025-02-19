@@ -1,8 +1,11 @@
 Title: Articles
-Date: 2025-02-12
+Date: 2025-02-19
 Status: hidden
 
 # Preprints
+
+[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Robust Partial-Label Learning by Leveraging Class Activation Values.__ Technical report, 2025. </br>
+[paper](https://arxiv.org/abs/2502.11743) (arXiv) | | [code](https://github.com/mathefuchs/robust-pll)
 
 [T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Technical report, 2025. </br>
 [paper](https://arxiv.org/abs/2502.07661) (arXiv) 
