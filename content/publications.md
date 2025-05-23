@@ -1,16 +1,14 @@
 Title: Articles
-Date: 2025-02-19
+Date: 2025-05-23
 Status: hidden
 
-# Preprints
-
-[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Robust Partial-Label Learning by Leveraging Class Activation Values.__ Technical report, 2025. </br>
-[paper](https://arxiv.org/abs/2502.11743) (arXiv) | | [code](https://github.com/mathefuchs/robust-pll)
-
-[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Technical report, 2025. </br>
-[paper](https://arxiv.org/abs/2502.07661) (arXiv) 
-
 # 2025
+
+[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2025. To appear.</br>
+[paper](https://arxiv.org/abs/2502.07661) (arXiv) | [code](https://github.com/mathefuchs/pll-with-conformal-candidate-cleaning)
+
+[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Robust Partial-Label Learning by Leveraging Class Activation Values.__ Machine Learning, 2025. To appear. </br>
+[paper](https://arxiv.org/abs/2502.11743) (arXiv) | [code](https://github.com/mathefuchs/robust-pll)
 
 F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2025. </br>
 [paper](https://openreview.net/forum?id=iLM3CeY2zb) (OpenReview) | [paper](https://arxiv.org/abs/2406.08401) (arXiv) | [poster](publications/kalinke25-poster.pdf) | [code](https://github.com/FlopsKa/nystroem-ksd)
@@ -32,10 +30,10 @@ F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Rate of H
 
 # 2023
 
-F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __Nyström M-Hilbert-Schmidt Independence Criterion.__ Proceedings of the Thirty-Ninth Conference on Uncertainty in Artificial Intelligence (UAI), PMLR 216:1005-1015, 2023.  </br>
+F. Kalinke and [Z. Szabó](https://zoltansz.github.io/). __Nyström M-Hilbert-Schmidt Independence Criterion.__ Conference on Uncertainty in Artificial Intelligence (UAI), PMLR 216:1005-1015, 2023.  </br>
 [paper](https://proceedings.mlr.press/v216/kalinke23a/kalinke23a.pdf) (UAI) | [supplement](https://proceedings.mlr.press/v216/kalinke23a/kalinke23a-supp.pdf) (UAI) | [poster](publications/kalinke23-poster.pdf) |  [slides](publications/kalinke23-spotlight.pdf) |  [paper](https://arxiv.org/abs/2302.09930) (arXiv) | [code](https://github.com/FlopsKa/nystroem-mhsic)
 
-F. Kalinke, [E. Fouché](https://edouardfouche.com/), H. Thiessen and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Multi-kernel Times Series Outlier Detection.__ Proceedings of the Twenty-Sixth International Conference on Discovery Science (DS 2023), LNAI 14276:688-702, 2023.<br/>
+F. Kalinke, [E. Fouché](https://edouardfouche.com/), H. Thiessen and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Multi-kernel Times Series Outlier Detection.__ International Conference on Discovery Science (DS 2023), LNAI 14276:688-702, 2023.<br/>
 [paper](publications/kalinke23b-article.pdf) (author version) | [paper](https://doi.org/10.1007/978-3-031-45275-8_46) (Springer) | [slides](publications/kalinke23b-slides.pdf) | [code](https://github.com/FlopsKa/mk-tsod/)
 
 
