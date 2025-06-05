@@ -1,6 +1,11 @@
 Title: Articles
-Date: 2025-05-23
+Date: 2025-06-06
 Status: hidden
+
+# Preprint
+
+F. Kalinke and [S. Gavioli-Akilagun](https://gaviosha.xyz/). __Optimal Online Change Detection via Random Fourier Features.__ Technical report, 2025.</br>
+[paper](https://arxiv.org/abs/2505.17789) (arXiv) | [code](https://github.com/FlopsKa/rff-change-detection)
 
 # 2025
 
