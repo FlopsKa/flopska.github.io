@@ -9,6 +9,9 @@ F. Kalinke and [S. Gavioli-Akilagun](https://gaviosha.xyz/). __Optimal Online Ch
 
 # 2025
 
+F. Kalinke. __Kernel-based information theoretical measures: accelerations and limits.__ Dissertation, Karlsruhe Institute of Technology, 2025. </br>
+[dissertation](https://publikationen.bibliothek.kit.edu/1000182140) (KITopen)
+
 [T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2025. To appear.</br>
 [paper](https://arxiv.org/abs/2502.07661) (arXiv) | [code](https://github.com/mathefuchs/pll-with-conformal-candidate-cleaning)
 
