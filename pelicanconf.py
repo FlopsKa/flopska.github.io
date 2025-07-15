@@ -4,7 +4,7 @@ SITEURL = ''
 USER_LOGO_URL = '/images/logo.jpg'
 ROUND_USER_LOGO = True
 HIDE_USER_LOGO = False
-TAGLINE = 'Statistical machine learning.</br>Kernel methods.</br>PhD student at KIT.</br>Climbing.'
+TAGLINE = 'Statistical machine learning.</br>Kernel methods.</br>Researcher at KIT.</br>Bouldering.'
 
 PATH = 'content'
 
