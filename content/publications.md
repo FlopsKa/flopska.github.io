@@ -15,8 +15,8 @@ F. Kalinke. __Kernel-based information theoretical measures: accelerations and l
 [T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2025. To appear.</br>
 [paper](https://arxiv.org/abs/2502.07661) (arXiv) | [code](https://github.com/mathefuchs/pll-with-conformal-candidate-cleaning)
 
-[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Robust Partial-Label Learning by Leveraging Class Activation Values.__ Machine Learning, 2025. To appear. </br>
-[paper](https://arxiv.org/abs/2502.11743) (arXiv) | [code](https://github.com/mathefuchs/robust-pll)
+[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Robust Partial-Label Learning by Leveraging Class Activation Values.__ Machine Learning, 2025. </br>
+[paper](https://arxiv.org/abs/2502.11743) (arXiv) | [paper](https://rdcu.be/ewnSZ) (Springer Link (OA)) | [code](https://github.com/mathefuchs/robust-pll)
 
 F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2025. </br>
 [paper](https://openreview.net/forum?id=iLM3CeY2zb) (OpenReview) | [paper](https://arxiv.org/abs/2406.08401) (arXiv) | [poster](publications/kalinke25-poster.pdf) | [code](https://github.com/FlopsKa/nystroem-ksd)
