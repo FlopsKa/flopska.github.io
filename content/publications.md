@@ -2,12 +2,11 @@ Title: Articles
 Date: 2025-06-06
 Status: hidden
 
-# Preprint
-
-F. Kalinke and [S. Gavioli-Akilagun](https://gaviosha.xyz/). __Optimal Online Change Detection via Random Fourier Features.__ Technical report, 2025.</br>
-[paper](https://arxiv.org/abs/2505.17789) (arXiv) | [code](https://github.com/FlopsKa/rff-change-detection)
-
 # 2025
+
+
+F. Kalinke\* and [S. Gavioli-Akilagun](https://gaviosha.xyz/)\* (\*Equal contribution). __Optimal Online Change Detection via Random Fourier Features.__ Advances in Neural Information Processing Systems (NeurIPS), 2025. To appear.</br>
+[paper](https://arxiv.org/abs/2505.17789) (arXiv) | [code](https://github.com/FlopsKa/rff-change-detection)
 
 F. Kalinke. __Kernel-based information theoretical measures: accelerations and limits.__ Dissertation, Karlsruhe Institute of Technology, 2025. </br>
 [dissertation](https://publikationen.bibliothek.kit.edu/1000182140) (KITopen)
