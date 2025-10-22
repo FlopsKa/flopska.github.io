@@ -2,6 +2,11 @@ Title: Articles
 Date: 2025-06-06
 Status: hidden
 
+# Preprint
+
+J. Cribeiro-Ramallo, A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ Technical report, 2025. </br>
+[paper](https://arxiv.org/abs/2510.15058) (arXiv)
+
 # 2025
 
 
