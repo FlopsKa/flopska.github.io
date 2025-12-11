@@ -1,5 +1,5 @@
 Title: Articles
-Date: 2025-10-22
+Date: 2025-12-11
 Status: hidden
 
 # Preprint
@@ -11,7 +11,7 @@ J. Cribeiro-Ramallo, A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zo
 
 
 F. Kalinke\* and [S. Gavioli-Akilagun](https://gaviosha.xyz/)\* (\*Equal contribution). __Optimal Online Change Detection via Random Fourier Features.__ Advances in Neural Information Processing Systems (NeurIPS), 2025. To appear.</br>
-[paper](https://arxiv.org/abs/2505.17789) (arXiv) | [code](https://github.com/FlopsKa/rff-change-detection)
+[paper](https://arxiv.org/abs/2505.17789) (arXiv) | [poster](publications/kalinke25b-poster.pdf) | [code](https://github.com/FlopsKa/rff-change-detection)
 
 F. Kalinke. __Kernel-based information theoretical measures: accelerations and limits.__ Dissertation, Karlsruhe Institute of Technology, 2025. </br>
 [dissertation](https://publikationen.bibliothek.kit.edu/1000182140) (KITopen)
@@ -22,7 +22,7 @@ F. Kalinke. __Kernel-based information theoretical measures: accelerations and l
 [T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Robust Partial-Label Learning by Leveraging Class Activation Values.__ Machine Learning, 2025. </br>
 [paper](https://arxiv.org/abs/2502.11743) (arXiv) | [paper](https://rdcu.be/ewnSZ) (Springer Link (OA)) | [code](https://github.com/mathefuchs/robust-pll)
 
-F. Kalinke, [Z. Szabó](https://zoltansz.github.io/) and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2025. </br>
+F. Kalinke, [Z. Szabó](https://zoltansz.github.io/), and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2025. </br>
 [paper](https://openreview.net/forum?id=iLM3CeY2zb) (OpenReview) | [paper](https://arxiv.org/abs/2406.08401) (arXiv) | [poster](publications/kalinke25-poster.pdf) | [code](https://github.com/FlopsKa/nystroem-ksd)
 
 F. Kalinke, [M. Heyden](https://scholar.google.com/citations?user=VJeY0WcAAAAJ), [E. Fouché](https://edouardfouche.com/) Georg Gntuni and [K. Böhm](https://scholar.google.com/citations?user=RzCtTjYAAAAJ). __Maximum Mean Discrepancy on Exponential Windows for Online Change Detection.__ Transactions on Machine Learning Research, 2025. </br>
