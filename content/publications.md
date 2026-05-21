@@ -1,17 +1,26 @@
-Title: Articles
-Date: 2025-12-11
+Title: Research
+Date: 2026-05-21
 Status: hidden
 
 # Preprint
 
-J. Cribeiro-Ramallo, A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ Technical report, 2025. </br>
+[Tobias Fuchs](https://tobiasfuchs.de/), F. Kalinke, and [Nadja Klein](https://www.kleinlab.de/subpages_team/klein.html). __QDSB: Quantized Diffusion Schrödinger Bridges.__ Preprint, 2026. </br>
+[paper](https://arxiv.org/abs/2605.11983) (arXiv) | [code](https://github.com/mathefuchs/qdsb)
+
+
+[P. Roudaki](https://www.lse.ac.uk/statistics/people/seyedpouya-mirrezaeiroudaki), [S. Gavioli-Akilagun](https://gaviosha.xyz/), F. Kalinke, [M. Azadkia](https://www.lse.ac.uk/people/mona-azadkia), and [Z. Szabó](https://zoltansz.github.io/). __Kernel Integrated R^2: A Measure of Dependence.__ Preprint, 2026. </br>
+[paper](https://arxiv.org/abs/2602.22985) (arXiv) | [code](https://github.com/PouyaRoudaki/KernelIR)
+
+# 2026
+
+J. Cribeiro-Ramallo, A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2026. To appear. </br>
 [paper](https://arxiv.org/abs/2510.15058) (arXiv)
+
 
 # 2025
 
-
-F. Kalinke\* and [S. Gavioli-Akilagun](https://gaviosha.xyz/)\* (\*Equal contribution). __Optimal Online Change Detection via Random Fourier Features.__ Advances in Neural Information Processing Systems (NeurIPS), 2025. To appear.</br>
-[paper](https://arxiv.org/abs/2505.17789) (arXiv) | [poster](publications/kalinke25b-poster.pdf) | [code](https://github.com/FlopsKa/rff-change-detection)
+F. Kalinke\* and [S. Gavioli-Akilagun](https://gaviosha.xyz/)\* (\*Equal contribution). __Optimal Online Change Detection via Random Fourier Features.__ Advances in Neural Information Processing Systems (NeurIPS), 2025.</br>
+[paper](https://arxiv.org/abs/2505.17789) (arXiv) | [paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/0e3b37f830edb6972bb1206324cb566f-Abstract-Conference.html) (NeurIPS) | [paper](https://openreview.net/forum?id=GhVQnjVjlI) (OpenReview) | [poster](publications/kalinke25b-poster.pdf) | [code](https://github.com/FlopsKa/rff-change-detection)
 
 F. Kalinke. __Kernel-based information theoretical measures: accelerations and limits.__ Dissertation, Karlsruhe Institute of Technology, 2025. </br>
 [dissertation](https://publikationen.bibliothek.kit.edu/1000182140) (KITopen)

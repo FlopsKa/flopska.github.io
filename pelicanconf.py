@@ -24,7 +24,7 @@ PLUGINS = ['pelican_katex']
 STATIC_PATHS = ["images", "publications", "CNAME"]
 
 MENUITEMS = (
-    ('Articles', '/articles.html'),
+    ('Research', '/research.html'),
     ('Imprint / Impressum', '/legal-details.html'),
 
 #    ('Books', '/category/books.html'),
