@@ -1,15 +1,20 @@
 Title: Research
-Date: 2026-05-21
+Date: 2026-05-26
 Status: hidden
 
 # Preprint
 
-[Tobias Fuchs](https://tobiasfuchs.de/), F. Kalinke, and [Nadja Klein](https://www.kleinlab.de/subpages_team/klein.html). __QDSB: Quantized Diffusion Schrödinger Bridges.__ Preprint, 2026. </br>
+F. Kalinke, [Z. Szabó](https://zoltansz.github.io/), and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy Tests.__ Preprint, 2026. </br>
+[paper](https://arxiv.org/abs/2605.25173) (arXiv) | [code](https://github.com/FlopsKa/fast-ksd-testing)
+
+
+[T. Fuchs](https://tobiasfuchs.de/), F. Kalinke, and [N. Klein](https://www.kleinlab.de/subpages_team/klein.html). __QDSB: Quantized Diffusion Schrödinger Bridges.__ Preprint, 2026. </br>
 [paper](https://arxiv.org/abs/2605.11983) (arXiv) | [code](https://github.com/mathefuchs/qdsb)
 
 
 [P. Roudaki](https://www.lse.ac.uk/statistics/people/seyedpouya-mirrezaeiroudaki), [S. Gavioli-Akilagun](https://gaviosha.xyz/), F. Kalinke, [M. Azadkia](https://www.lse.ac.uk/people/mona-azadkia), and [Z. Szabó](https://zoltansz.github.io/). __Kernel Integrated R^2: A Measure of Dependence.__ Preprint, 2026. </br>
 [paper](https://arxiv.org/abs/2602.22985) (arXiv) | [code](https://github.com/PouyaRoudaki/KernelIR)
+
 
 # 2026
 
