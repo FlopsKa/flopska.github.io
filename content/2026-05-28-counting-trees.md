@@ -1,5 +1,5 @@
 Title: Notes on Counting Tree Structures
-Date: 2024-11-04
+Date: 2026-05-28
 Tags: combinatorics; notes
 
 A few months ago, I gave a talk at our chair's seminar on counting tree-like structures. Here, I am sharing my [notes](notes/kalinke26-counting-trees-notes.pdf) and the accompanying [slides](notes/kalinke26-counting-trees-slides.pdf).
