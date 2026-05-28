@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>flopska.com</title><link href="https://flopska.com/" rel="alternate"/><link href="https://flopska.com/feeds/all.atom.xml" rel="self"/><id>https://flopska.com/</id><updated>2024-11-04T00:00:00+01:00</updated><entry><title>Notes on the limiting distribution of incomplete U-statistics</title><link href="https://flopska.com/notes-on-the-limiting-distribution-of-incomplete-u-statistics.html" rel="alternate"/><published>2024-11-04T00:00:00+01:00</published><updated>2024-11-04T00:00:00+01:00</updated><author><name>Florian Kalinke</name></author><id>tag:flopska.com,2024-11-04:/notes-on-the-limiting-distribution-of-incomplete-u-statistics.html</id><summary type="html">&lt;p&gt;&lt;link rel="stylesheet"
+<feed xmlns="http://www.w3.org/2005/Atom"><title>flopska.com</title><link href="https://flopska.com/" rel="alternate"/><link href="https://flopska.com/feeds/all.atom.xml" rel="self"/><id>https://flopska.com/</id><updated>2024-11-04T00:00:00+01:00</updated><entry><title>Notes on Counting Tree Structures</title><link href="https://flopska.com/notes-on-counting-tree-structures.html" rel="alternate"/><published>2024-11-04T00:00:00+01:00</published><updated>2024-11-04T00:00:00+01:00</updated><author><name>Florian Kalinke</name></author><id>tag:flopska.com,2024-11-04:/notes-on-counting-tree-structures.html</id><summary type="html">&lt;p&gt;A few months ago, I gave a talk at our chair's seminar on counting tree-like structures. Here, I am sharing my &lt;a href="notes/kalinke26-counting-trees-notes.pdf"&gt;notes&lt;/a&gt; and the accompanying &lt;a href="notes/kalinke26-counting-trees-slides.pdf"&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The idea of these notes is to introduce tree counting to computer scientists
+by combining extraordinary existing expositions, each focusing on a particular …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A few months ago, I gave a talk at our chair's seminar on counting tree-like structures. Here, I am sharing my &lt;a href="notes/kalinke26-counting-trees-notes.pdf"&gt;notes&lt;/a&gt; and the accompanying &lt;a href="notes/kalinke26-counting-trees-slides.pdf"&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The idea of these notes is to introduce tree counting to computer scientists
+by combining extraordinary existing expositions, each focusing on a particular
+subtopic needed, in a consistent fashion. To do so, we let ourselves be guided by
+the following classical problems in combinatorics.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Given three distinct dice, what is the probability that their eyes sum to
+ten?&lt;/li&gt;
+&lt;li&gt;How many ways are there of making change for $1?&lt;/li&gt;
+&lt;li&gt;What is the number of necklaces that can be constructed from five beads
+available in three distinct colors?&lt;/li&gt;
+&lt;li&gt;In how many ways can the corners of a square be colored?&lt;/li&gt;
+&lt;li&gt;How many trees with a given number of nodes are there?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Indeed, by addressing these questions one by one, we build up to the Pólya
+enumeration theorem [Pólya, 1937]&lt;sup id="fnref:polya37counting"&gt;&lt;a class="footnote-ref" href="#fn:polya37counting"&gt;1&lt;/a&gt;&lt;/sup&gt;, one of the most powerful results in enumerative combinatorics, and used here to enumerate the number of trees with given
+node degree. Along the way, we recall generating functions, some group theory,
+Burnside’s lemma, and Otter’s dissimilarity characteristic theorem.&lt;/p&gt;
+&lt;p&gt;The exposition of Pólya’s enumeration theorem follows Tucker [1974]&lt;sup id="fnref:tucker74polya"&gt;&lt;a class="footnote-ref" href="#fn:tucker74polya"&gt;2&lt;/a&gt;&lt;/sup&gt;. For
+counting trees, we rely on Harary and Palmer [1973]&lt;sup id="fnref:harary73graphicalenumeration"&gt;&lt;a class="footnote-ref" href="#fn:harary73graphicalenumeration"&gt;3&lt;/a&gt;&lt;/sup&gt;. Additional helpful resources,
+besides the ones stated in the main text below, include Riordan [1958]&lt;sup id="fnref:riordan58combinatorialanalysis"&gt;&lt;a class="footnote-ref" href="#fn:riordan58combinatorialanalysis"&gt;4&lt;/a&gt;&lt;/sup&gt;, Harary
+[1969]&lt;sup id="fnref:harary69graphtheory"&gt;&lt;a class="footnote-ref" href="#fn:harary69graphtheory"&gt;5&lt;/a&gt;&lt;/sup&gt;, Shapiro [1973]&lt;sup id="fnref:shapiro73finitegroups"&gt;&lt;a class="footnote-ref" href="#fn:shapiro73finitegroups"&gt;6&lt;/a&gt;&lt;/sup&gt;, Judson [2022]&lt;sup id="fnref:judson22abstractalgebra"&gt;&lt;a class="footnote-ref" href="#fn:judson22abstractalgebra"&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;... continued in the pdf linked above.&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:polya37counting"&gt;
+&lt;p&gt;G. Pólya. Kombinatorische Anzahlbestimmungen für Gruppen, Graphen und chemische Verbindungen. Acta Mathematica, 68(1):145–254, 1937.&amp;#160;&lt;a class="footnote-backref" href="#fnref:polya37counting" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:tucker74polya"&gt;
+&lt;p&gt;Alan Tucker. Polya’s enumeration formula by example. Mathematics Magazine, 47:248–256, 1974.&amp;#160;&lt;a class="footnote-backref" href="#fnref:tucker74polya" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:harary73graphicalenumeration"&gt;
+&lt;p&gt;Frank Harary and Edgar M. Palmer. Graphical Enumeration. Academic Press, 1973.&amp;#160;&lt;a class="footnote-backref" href="#fnref:harary73graphicalenumeration" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:riordan58combinatorialanalysis"&gt;
+&lt;p&gt;John Riordan. An Introduction to Combinatorial Analysis. John Wiley &amp;amp; Sons, 1958.&amp;#160;&lt;a class="footnote-backref" href="#fnref:riordan58combinatorialanalysis" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:harary69graphtheory"&gt;
+&lt;p&gt;Frank Harary. Graph Theory. Addison-Wesley, 1969.&amp;#160;&lt;a class="footnote-backref" href="#fnref:harary69graphtheory" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:shapiro73finitegroups"&gt;
+&lt;p&gt;Louis W. Shapiro. Finite groups acting on sets with applications. Mathematics Magazine, 46(3):136–147, 1973.&amp;#160;&lt;a class="footnote-backref" href="#fnref:shapiro73finitegroups" title="Jump back to footnote 6 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:judson22abstractalgebra"&gt;
+&lt;p&gt;Thomas W. Judson. Abstract Algebra. orthogonal publishing l3c, 2022.&amp;#160;&lt;a class="footnote-backref" href="#fnref:judson22abstractalgebra" title="Jump back to footnote 7 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="misc"/><category term="combinatorics"/><category term="notes"/></entry><entry><title>Notes on the limiting distribution of incomplete U-statistics</title><link href="https://flopska.com/notes-on-the-limiting-distribution-of-incomplete-u-statistics.html" rel="alternate"/><published>2024-11-04T00:00:00+01:00</published><updated>2024-11-04T00:00:00+01:00</updated><author><name>Florian Kalinke</name></author><id>tag:flopska.com,2024-11-04:/notes-on-the-limiting-distribution-of-incomplete-u-statistics.html</id><summary type="html">&lt;p&gt;&lt;link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
       crossorigin="anonymous"&gt;&lt;/p&gt;
 &lt;p&gt;The main results on the limiting distributions of incomplete U-statistics were developed in Blom (1976)&lt;sup id="fnref:blom1976incomplete"&gt;&lt;a class="footnote-ref" href="#fn:blom1976incomplete"&gt;1&lt;/a&gt;&lt;/sup&gt; and Janson (1984)&lt;sup id="fnref:janson1984incomplete"&gt;&lt;a class="footnote-ref" href="#fn:janson1984incomplete"&gt;2&lt;/a&gt;&lt;/sup&gt;; Lee (1990)&lt;sup id="fnref:lee1990ustats"&gt;&lt;a class="footnote-ref" href="#fn:lee1990ustats"&gt;3&lt;/a&gt;&lt;/sup&gt; gives a summary. However, for my taste, the proofs in Janson (1984) are somewhat hard to read. Lee (1990) improves upon those but has some inaccuracies---the main …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;link rel="stylesheet"
