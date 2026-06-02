@@ -1,5 +1,5 @@
 Title: Research
-Date: 2026-05-26
+Date: 2026-06-02
 Status: hidden
 
 # Preprint
@@ -12,11 +12,11 @@ F. Kalinke, [Z. Szabó](https://zoltansz.github.io/), and [B. K. Sriperumbudur](
 [paper](https://arxiv.org/abs/2605.11983) (arXiv) | [code](https://github.com/mathefuchs/qdsb)
 
 
-[P. Roudaki](https://www.lse.ac.uk/statistics/people/seyedpouya-mirrezaeiroudaki), [S. Gavioli-Akilagun](https://gaviosha.xyz/), F. Kalinke, [M. Azadkia](https://www.lse.ac.uk/people/mona-azadkia), and [Z. Szabó](https://zoltansz.github.io/). __Kernel Integrated R^2: A Measure of Dependence.__ Preprint, 2026. </br>
+# 2026
+
+[P. Roudaki](https://www.lse.ac.uk/statistics/people/seyedpouya-mirrezaeiroudaki), [S. Gavioli-Akilagun](https://gaviosha.xyz/), F. Kalinke, [M. Azadkia](https://www.lse.ac.uk/people/mona-azadkia), and [Z. Szabó](https://zoltansz.github.io/). __Kernel Integrated R^2: A Measure of Dependence.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2026. To appear.</br>
 [paper](https://arxiv.org/abs/2602.22985) (arXiv) | [code](https://github.com/PouyaRoudaki/KernelIR)
 
-
-# 2026
 
 J. Cribeiro-Ramallo, A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2026. To appear. </br>
 [paper](https://arxiv.org/abs/2510.15058) (arXiv)
@@ -30,8 +30,8 @@ F. Kalinke\* and [S. Gavioli-Akilagun](https://gaviosha.xyz/)\* (\*Equal contrib
 F. Kalinke. __Kernel-based information theoretical measures: accelerations and limits.__ Dissertation, Karlsruhe Institute of Technology, 2025. </br>
 [dissertation](https://publikationen.bibliothek.kit.edu/1000182140) (KITopen)
 
-[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2025. To appear.</br>
-[paper](https://arxiv.org/abs/2502.07661) (arXiv) | [code](https://github.com/mathefuchs/pll-with-conformal-candidate-cleaning)
+[T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Partial-Label Learning with Conformal Candidate Cleaning.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2025.</br>
+[paper](https://proceedings.mlr.press/v286/fuchs25a.html) (UAI) | [paper](https://arxiv.org/abs/2502.07661) (arXiv) | [code](https://github.com/mathefuchs/pll-with-conformal-candidate-cleaning)
 
 [T. Fuchs](https://tobiasfuchs.de/) and F. Kalinke. __Robust Partial-Label Learning by Leveraging Class Activation Values.__ Machine Learning, 2025. </br>
 [paper](https://arxiv.org/abs/2502.11743) (arXiv) | [paper](https://rdcu.be/ewnSZ) (Springer Link (OA)) | [code](https://github.com/mathefuchs/robust-pll)
