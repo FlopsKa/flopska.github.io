@@ -4,6 +4,9 @@ Status: hidden
 
 # Preprint
 
+[J. Cribeiro-Ramallo](https://scholar.google.com/citations?user=SeWz2NwAAAAJ&hl=de&oi=ao), F. Kalinke, and [Z. Szabó](https://zoltansz.github.io/).  __Minimax Lower Bounds of Kernel Discrepancy Estimation: MMD, HSIC, KSD.__ Preprint, 2026. </br>
+[paper](https://arxiv.org/abs/2607.24235) (arXiv)
+
 F. Kalinke, [Z. Szabó](https://zoltansz.github.io/), and [B. K. Sriperumbudur](https://bharathsv.github.io/). __Nyström Kernel Stein Discrepancy Tests.__ Preprint, 2026. </br>
 [paper](https://arxiv.org/abs/2605.25173) (arXiv) | [code](https://github.com/FlopsKa/fast-ksd-testing)
 
@@ -18,7 +21,7 @@ F. Kalinke, [Z. Szabó](https://zoltansz.github.io/), and [B. K. Sriperumbudur](
 [paper](https://arxiv.org/abs/2602.22985) (arXiv) | [code](https://github.com/PouyaRoudaki/KernelIR)
 
 
-J. Cribeiro-Ramallo, A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2026. To appear. </br>
+[J. Cribeiro-Ramallo](https://scholar.google.com/citations?user=SeWz2NwAAAAJ&hl=de&oi=ao), A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2026. To appear. </br>
 [paper](https://arxiv.org/abs/2510.15058) (arXiv)
 
 
