@@ -1,8 +1,13 @@
 Title: Research
-Date: 2026-06-02
+Date: 2026-10-09
 Status: hidden
 
 # Preprint
+
+
+[F. Matteucci](https://scholar.google.com/citations?user=X_O8eI0AAAAJ&hl=en) and F. Kalinke.  __Conditional Kernel Stein Discrepancy.__ Preprint, 2026. </br>
+[paper](https://arxiv.org/abs/2610.11863) (arXiv)
+
 
 [J. Cribeiro-Ramallo](https://scholar.google.com/citations?user=SeWz2NwAAAAJ&hl=de&oi=ao), F. Kalinke, and [Z. Szabó](https://zoltansz.github.io/).  __Minimax Lower Bounds of Kernel Discrepancy Estimation: MMD, HSIC, KSD.__ Preprint, 2026. </br>
 [paper](https://arxiv.org/abs/2607.24235) (arXiv)
