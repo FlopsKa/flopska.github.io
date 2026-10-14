@@ -1,8 +1,11 @@
 Title: Research
-Date: 2026-10-09
+Date: 2026-10-14
 Status: hidden
 
 # Preprint
+
+[J. Cribeiro-Ramallo](https://scholar.google.com/citations?user=SeWz2NwAAAAJ&hl=de&oi=ao), F. Kalinke, and [Z. Szabó](https://zoltansz.github.io/).  __Unbounded Characteristic and Universal Kernels.__ Preprint, 2026. </br>
+[paper](https://arxiv.org/abs/2610.09731) (arXiv)
 
 
 [F. Matteucci](https://scholar.google.com/citations?user=X_O8eI0AAAAJ&hl=en) and F. Kalinke.  __Conditional Kernel Stein Discrepancy.__ Preprint, 2026. </br>
@@ -22,12 +25,12 @@ F. Kalinke, [Z. Szabó](https://zoltansz.github.io/), and [B. K. Sriperumbudur](
 
 # 2026
 
-[P. Roudaki](https://www.lse.ac.uk/statistics/people/seyedpouya-mirrezaeiroudaki), [S. Gavioli-Akilagun](https://gaviosha.xyz/), F. Kalinke, [M. Azadkia](https://www.lse.ac.uk/people/mona-azadkia), and [Z. Szabó](https://zoltansz.github.io/). __Kernel Integrated R^2: A Measure of Dependence.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2026. To appear.</br>
-[paper](https://arxiv.org/abs/2602.22985) (arXiv) | [code](https://github.com/PouyaRoudaki/KernelIR)
+[P. Roudaki](https://www.lse.ac.uk/statistics/people/seyedpouya-mirrezaeiroudaki), [S. Gavioli-Akilagun](https://gaviosha.xyz/), F. Kalinke, [M. Azadkia](https://www.lse.ac.uk/people/mona-azadkia), and [Z. Szabó](https://zoltansz.github.io/). __Kernel Integrated R^2: A Measure of Dependence.__ Conference on Uncertainty in Artificial Intelligence (UAI), 2026.</br>
+[paper](https://proceedings.mlr.press/v337/roudaki26a.html) (UAI) | [paper](https://arxiv.org/abs/2602.22985) (arXiv) | [code](https://github.com/PouyaRoudaki/KernelIR)
 
 
-[J. Cribeiro-Ramallo](https://scholar.google.com/citations?user=SeWz2NwAAAAJ&hl=de&oi=ao), A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2026. To appear. </br>
-[paper](https://arxiv.org/abs/2510.15058) (arXiv)
+[J. Cribeiro-Ramallo](https://scholar.google.com/citations?user=SeWz2NwAAAAJ&hl=de&oi=ao), A. Aich, F. Kalinke, A. B. Aich, and [Z. Szabó](https://zoltansz.github.io/). __The Minimax Lower Bound of Kernel Stein Discrepancy Estimation.__ International Conference on Artificial Intelligence and Statistics (AISTATS), 2026. </br>
+[paper](https://proceedings.mlr.press/v300/cribeiro-ramallo26a.html) (UAI) | [paper](https://arxiv.org/abs/2510.15058) (arXiv)
 
 
 # 2025
